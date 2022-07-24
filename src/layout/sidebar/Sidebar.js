@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { MENUITEMS } from './menu';
 
 const Sidebar = () => {
   return (
@@ -22,23 +24,21 @@ const Sidebar = () => {
 
           <nav className='navigation'>
             <ul>
-              <li className='active'>
-                <a
-                  href='index.html'
-                  className='nav-link title-color font-sm'
-                  onClick={(e) => {
-                    e.preventDefault();
-                    console.log('hello i am click');
-                  }}>
-                  <i className='iconly-Home icli'></i>
-                  <span>Home</span>
-                </a>
-                <span>
-                  <i data-feather='chevron-right'></i>
-                </span>
-              </li>
+              {MENUITEMS.map((item, i) => (
+                <li className='active' key={i}>
+                  <Link to={item.path} className='nav-link title-color font-sm' key={i}>
+                    <i className='iconly-Home icli'></i>
+                    <span>{item.title}</span>
+                  </Link>
+                  <span>
+                    <i data-feather='chevron-right'></i>
+                  </span>
+                </li>
+              ))}
 
-              <li>
+              {/* IMP NOTE: don't use single single data !! use a loop method */}
+
+              {/* <li>
                 <a href='category-wide.html' className='nav-link title-color font-sm'>
                   <i className='iconly-Category icli'></i>
                   <span>Shop by Category</span>
@@ -130,7 +130,7 @@ const Sidebar = () => {
                   <input id='rtlButton' type='checkbox' />
                   <span className='before-none'></span>
                 </div>
-              </li>
+              </li> */}
             </ul>
           </nav>
         </div>

@@ -1,8 +1,8 @@
 import React from 'react';
-import Sidebar from './layout/sidebar/Sidebar';
+import Routers from './routes';
 
 function App() {
-  return <Sidebar />;
+  return <Routers />;
 }
 
 export default App;
