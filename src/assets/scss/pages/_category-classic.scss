@@ -1,0 +1,42 @@
+/*=====================
+ 4.6 Category Classic Css 
+==========================*/
+.catagories-classic {
+  .search-box {
+    @include search-box;
+  }
+  .catagories-wrap {
+    .media {
+      position: relative;
+      background-color: $grey-light;
+      border-radius: 8px;
+      @media only screen and (max-width: 375px) {
+        align-items: center;
+      }
+      .media-body {
+        width: calc(100% - 80px);
+        a {
+          font-weight: 600;
+          font-size: 15px;
+          margin-bottom: 2px;
+        }
+        p {
+          margin-bottom: 0;
+        }
+      }
+      > svg {
+        width: 30px;
+        height: 30px;
+        margin-left: auto;
+        margin-right: -10px;
+        stroke: $theme-color;
+        [dir="rtl"] & {
+          margin-left: -10px;
+          margin-right: auto;
+          transform-origin: center;
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+}
