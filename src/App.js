@@ -1,9 +1,8 @@
 import React from 'react';
+import Sidebar from './layout/sidebar/Sidebar';
 
 function App() {
-  return (
-    <h1>Get Start</h1>
-  );
+  return <Sidebar />;
 }
 
 export default App;

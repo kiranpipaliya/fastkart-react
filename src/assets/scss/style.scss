@@ -55,52 +55,52 @@
 /* 5.1 Loader CSS */
 
 /// Utils Scss Files ///
-@import "utils/variables";
-@import "utils/mixin";
-@import "utils/classes";
+@import 'utils/variables';
+@import 'utils/mixin';
+@import 'utils/classes';
 
 /// Base Scss Files ///
-@import "base/reset";
-@import "base/typography";
+// @import 'base/reset';
+// @import 'base/typography';
 
 /// Components Scss Files ///
-@import "components/accordion";
-@import "components/buttons";
-@import "components/form";
-@import "components/modal";
-@import "components/nav-tab";
-@import "components/product-card";
-@import "components/ratio";
-@import "components/switch";
+// @import 'components/accordion';
+// @import 'components/buttons';
+// @import 'components/form';
+// @import 'components/modal';
+// @import 'components/nav-tab';
+// @import 'components/product-card';
+// @import 'components/ratio';
+// @import 'components/switch';
 
 /// Layout Scss Files ///
-@import "layout/header";
-@import "layout/sidebar";
-@import "layout/footer";
+@import 'layout/header';
+@import 'layout/sidebar';
+@import 'layout/footer';
 
 /// Pages Scss Files ///
-@import "pages/about-us";
-@import "pages/account-page";
-@import "pages/authentic";
-@import "pages/cart-wishlist-page";
-@import "pages/catagories-wide";
-@import "pages/category-classic";
-@import "pages/category-morden";
-@import "pages/checkout-page";
-@import "pages/error-404";
-@import "pages/help";
-@import "pages/index";
-@import "pages/notification";
-@import "pages/offer-page";
-@import "pages/onboarding";
-@import "pages/order-detail";
-@import "pages/order-history";
-@import "pages/order-tracking";
-@import "pages/product-page";
-@import "pages/search";
-@import "pages/setting-page";
-@import "pages/shop-page";
-@import "pages/terms";
+@import 'pages/about-us';
+@import 'pages/account-page';
+@import 'pages/authentic';
+@import 'pages/cart-wishlist-page';
+@import 'pages/catagories-wide';
+@import 'pages/category-classic';
+@import 'pages/category-morden';
+@import 'pages/checkout-page';
+@import 'pages/error-404';
+@import 'pages/help';
+@import 'pages/index';
+@import 'pages/notification';
+@import 'pages/offer-page';
+@import 'pages/onboarding';
+@import 'pages/order-detail';
+@import 'pages/order-history';
+@import 'pages/order-tracking';
+@import 'pages/product-page';
+@import 'pages/search';
+@import 'pages/setting-page';
+@import 'pages/shop-page';
+@import 'pages/terms';
 
 /// Theme Scss ///
-@import "themes/loader";
+@import 'themes/loader';

@@ -110,7 +110,7 @@ $theme-bg-color: (
       position: absolute;
       background-color: inherit;
       border-radius: inherit;
-      content: "";
+      content: '';
       width: inherit;
       height: inherit;
       left: 50%;
@@ -163,7 +163,7 @@ $theme-bg-color: (
       position: absolute;
       background-color: inherit;
       border-radius: inherit;
-      content: "";
+      content: '';
       width: inherit;
       height: inherit;
       left: 50%;
@@ -202,7 +202,7 @@ $theme-bg-color: (
     border: $border2;
     padding: 0;
     cursor: pointer;
-    [class="dark"] & {
+    [class='dark'] & {
       border-color: $theme-color;
     }
     button {
