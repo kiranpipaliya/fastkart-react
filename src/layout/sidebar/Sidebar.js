@@ -1,16 +1,21 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { MENUITEMS } from './menu';
+import { Link } from 'react-router-dom';
+import { ActiveNavLinkUrl } from '../../helper/activeNavUr';
+import { Iconly } from 'react-iconly';
+import { ChevronRight } from 'react-feather';
 
 const Sidebar = () => {
   return (
     <>
-      <a href='#javascript' className='overlay-sidebar' />
-      <aside className='header-sidebar'>
+      {/* <!-- Sidebar Start --> */}
+      <a href='#' className='overlay-sidebar '></a>
+      <aside className='header-sidebar '>
         <div className='wrap'>
           <div className='user-panel'>
             <div className='media'>
               <a href='account.html'>
+                {' '}
                 <img src='assets/images/avatar/avatar.jpg' alt='avatar' />
               </a>
               <div className='media-body'>
@@ -22,128 +27,63 @@ const Sidebar = () => {
             </div>
           </div>
 
+          {/* <!-- Navigation Start --> */}
           <nav className='navigation'>
             <ul>
               {MENUITEMS.map((item, i) => (
-                <li className='active' key={i}>
-                  <Link to={item.path} className='nav-link title-color font-sm' key={i}>
-                    <i className='iconly-Home icli'></i>
-                    <span>{item.title}</span>
-                  </Link>
-                  <span>
-                    <i data-feather='chevron-right'></i>
-                  </span>
+                <li className={ActiveNavLinkUrl(item.path, 'active')} key={i}>
+                  {item.type === 'link' && (
+                    <>
+                      <Link to={item.path} className='nav-link title-color font-sm'>
+                        <Iconly name={item.icon}></Iconly>
+                        <span>{item.title}</span>
+                      </Link>
+                      <span>
+                        <ChevronRight />
+                      </span>
+                    </>
+                  )}
+                  {item.type === 'modal' && (
+                    <>
+                      <Link to='#' className='nav-link title-color font-sm'>
+                        <img src={`assets/icons/png/${item.icon}`} alt='flag' />
+                        <span>{item.title}</span>
+                      </Link>
+                      <span>
+                        <ChevronRight />
+                      </span>
+                    </>
+                  )}
+                  {item.type === 'settingBtn' && (
+                    <>
+                      <a href='#' className='nav-link title-color font-sm'>
+                        <Iconly name={item.icon}></Iconly>
+                        <span>{item.title}</span>
+                      </a>
+
+                      <div className='dark-switch'>
+                        <input id='rtlButton' type='checkbox' />
+                        <span className='before-none'></span>
+                      </div>
+                    </>
+                  )}
                 </li>
               ))}
-
-              {/* IMP NOTE: don't use single single data !! use a loop method */}
-
-              {/* <li>
-                <a href='category-wide.html' className='nav-link title-color font-sm'>
-                  <i className='iconly-Category icli'></i>
-                  <span>Shop by Category</span>
-                </a>
-                <span>
-                  <i data-feather='chevron-right'></i>
-                </span>
-              </li>
-
-              <li>
-                <a href='order-history.html' className='nav-link title-color font-sm'>
-                  <i className='iconly-Document icli'></i>
-                  <span>Orders</span>
-                </a>
-                <span>
-                  <i data-feather='chevron-right'></i>
-                </span>
-              </li>
-
-              <li>
-                <a href='wishlist.html' className='nav-link title-color font-sm'>
-                  <i className='iconly-Heart icli'></i>
-                  <span>Your Wishlist</span>
-                </a>
-                <span>
-                  <i data-feather='chevron-right'></i>
-                </span>
-              </li>
-
-              <li>
-                <a href='/' data-bs-toggle='offcanvas' data-bs-target='#language' aria-controls='language' className='nav-link title-color font-sm'>
-                  <img src='assets/icons/png/flags.png' alt='flag' />
-                  <span>Langauge</span>
-                </a>
-                <span>
-                  <i data-feather='chevron-right'></i>
-                </span>
-              </li>
-
-              <li>
-                <a href='account.html' className='nav-link title-color font-sm'>
-                  <i className='iconly-Add-User icli'></i>
-                  <span>Your Account</span>
-                </a>
-                <span>
-                  <i data-feather='chevron-right'></i>
-                </span>
-              </li>
-
-              <li>
-                <a href='notification.html' className='nav-link title-color font-sm'>
-                  <i className='iconly-Notification icli'></i>
-                  <span>Notification</span>
-                </a>
-                <span>
-                  <i data-feather='chevron-right'></i>
-                </span>
-              </li>
-
-              <li>
-                <a href='setting.html' className='nav-link title-color font-sm'>
-                  <i className='iconly-Setting icli'></i>
-                  <span>Settings</span>
-                </a>
-                <span>
-                  <i data-feather='chevron-right'></i>
-                </span>
-              </li>
-
-              <li>
-                <a href='/' className='nav-link title-color font-sm'>
-                  <i className='iconly-Graph icli'></i>
-                  <span>Dark</span>
-                </a>
-
-                <div className='dark-switch'>
-                  <input id='darkButton' type='checkbox' />
-                  <span></span>
-                </div>
-              </li>
-
-              <li>
-                <a href='/' className='nav-link title-color font-sm'>
-                  <i className='iconly-Filter icli'></i>
-                  <span>RTL</span>
-                </a>
-
-                <div className='dark-switch'>
-                  <input id='rtlButton' type='checkbox' />
-                  <span className='before-none'></span>
-                </div>
-              </li> */}
             </ul>
           </nav>
+          {/* <!-- Navigation End --> */}
         </div>
 
         <div className='contact-us'>
           <span className='font-xs title-color'>Contact Support</span>
           <p className='content-color font-xs'>If you have any problem,queries or questions feel free to reach out</p>
-          <a href='/' className='btn-solid'>
+          <a href='#' className='btn-solid'>
             {' '}
             Contact Us{' '}
           </a>
         </div>
       </aside>
+      {/* <!-- Sidebar End --> */}
     </>
   );
 };
