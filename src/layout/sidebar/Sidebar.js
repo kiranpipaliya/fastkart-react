@@ -2,7 +2,7 @@ import React from 'react';
 import { MENUITEMS } from './menu';
 import { Link } from 'react-router-dom';
 import { ActiveNavLinkUrl } from '../../helper/activeNavUr';
-import { Iconly } from 'react-iconly';
+// import { Iconly } from 'react-iconly';
 import { ChevronRight } from 'react-feather';
 
 const Sidebar = () => {
@@ -35,7 +35,7 @@ const Sidebar = () => {
                   {item.type === 'link' && (
                     <>
                       <Link to={item.path} className='nav-link title-color font-sm'>
-                        <Iconly name={item.icon}></Iconly>
+                        {/* <Iconly name={item.icon}></Iconly> */}
                         <span>{item.title}</span>
                       </Link>
                       <span>
@@ -57,7 +57,7 @@ const Sidebar = () => {
                   {item.type === 'settingBtn' && (
                     <>
                       <a href='#' className='nav-link title-color font-sm'>
-                        <Iconly name={item.icon}></Iconly>
+                        {/* <Iconly name={item.icon}></Iconly> */}
                         <span>{item.title}</span>
                       </a>
 
