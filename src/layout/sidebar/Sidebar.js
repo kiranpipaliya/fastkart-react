@@ -1,16 +1,23 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import { MENUITEMS } from './menu';
 import { Link } from 'react-router-dom';
 import { ActiveNavLinkUrl } from '../../helper/activeNavUr';
-// import { Iconly } from 'react-iconly';
 import { ChevronRight } from 'react-feather';
 
-const Sidebar = () => {
+const Sidebar = (props) => {
+  const sidebarShow = props.sideBarShow;
+  const hideSidebarHandler = useCallback(
+    (event) => {
+      event.preventDefault();
+      props.sideBarHide(sidebarShow);
+    },
+    [sidebarShow],
+  );
   return (
     <>
       {/* <!-- Sidebar Start --> */}
-      <a href='#' className='overlay-sidebar '></a>
-      <aside className='header-sidebar '>
+      <a href='#' onClick={hideSidebarHandler} className={`overlay-sidebar ${sidebarShow ? 'show' : ''}`}></a>
+      <aside className={`header-sidebar  ${sidebarShow ? 'show' : ''}`}>
         <div className='wrap'>
           <div className='user-panel'>
             <div className='media'>
@@ -35,7 +42,7 @@ const Sidebar = () => {
                   {item.type === 'link' && (
                     <>
                       <Link to={item.path} className='nav-link title-color font-sm'>
-                        {/* <Iconly name={item.icon}></Iconly> */}
+                        {item.icon}
                         <span>{item.title}</span>
                       </Link>
                       <span>
@@ -57,7 +64,7 @@ const Sidebar = () => {
                   {item.type === 'settingBtn' && (
                     <>
                       <a href='#' className='nav-link title-color font-sm'>
-                        {/* <Iconly name={item.icon}></Iconly> */}
+                        {item.icon}
                         <span>{item.title}</span>
                       </a>
 

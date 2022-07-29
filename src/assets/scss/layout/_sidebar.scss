@@ -16,7 +16,7 @@
 }
 .header-sidebar {
   position: fixed;
-  left: -320px;
+  left: -100%;
   top: 0;
   bottom: 0;
   background-color: $white;
@@ -26,7 +26,7 @@
   transition: all 0.5s ease;
   z-index: 5;
   padding: 17px;
-  [dir="rtl"] & {
+  [dir='rtl'] & {
     left: unset;
     border-radius: 18px 0 0 18px;
     right: -320px;
@@ -37,7 +37,7 @@
   &.show {
     left: 0;
     transition: all 0.5s ease;
-    [dir="rtl"] & {
+    [dir='rtl'] & {
       left: unset;
       right: 0;
     }
@@ -62,7 +62,7 @@
       }
       .media-body {
         text-align: left;
-        [dir="rtl"] & {
+        [dir='rtl'] & {
           text-align: right;
         }
         > a {
@@ -108,8 +108,9 @@
             font-size: 24px;
           }
           svg {
-            width: 24px;
-            height: 24px;
+            width: 23px;
+            height: 23px;
+            stroke-width: 1.3px;
           }
           img {
             width: 22px;
@@ -131,7 +132,7 @@
           svg {
             width: 18px;
             height: 18px;
-            [dir="rtl"] & {
+            [dir='rtl'] & {
               transform-origin: center;
               transform: rotate(180deg);
             }
@@ -142,7 +143,7 @@
           background-color: $theme-color;
           .nav-link {
             color: $white-text-dark;
-            [class="dark"] & {
+            [class='dark'] & {
               color: $white-text-dark;
             }
           }
@@ -180,7 +181,7 @@
       font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (1920 - 320)));
       line-height: 18px;
       color: $white-text-dark;
-      [class="dark"] & {
+      [class='dark'] & {
         color: $white-text-dark;
       }
     }
