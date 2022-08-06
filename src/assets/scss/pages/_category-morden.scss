@@ -6,6 +6,15 @@
     @include search-box;
   }
   .catagories-wrap {
+    .catagories-sidebar {
+      max-width: 250px;
+    }
+    .catagories-content {
+      max-width: calc(100% - 250px);
+      @media only screen and (max-width: 475px) {
+        max-width: 100%;
+      }
+    }
     .list-group {
       position: sticky;
       top: 15px;
@@ -54,6 +63,12 @@
           font-size: 15px;
           color: $title-color;
           font-weight: 400;
+          transition: all 0.5s;
+        }
+        &:hover {
+          h4 {
+            color: $theme-color;
+          }
         }
       }
     }

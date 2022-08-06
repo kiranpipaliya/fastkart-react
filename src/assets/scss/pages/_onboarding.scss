@@ -20,6 +20,15 @@
       margin-left: auto;
       margin-right: auto;
       margin-bottom: calc(25px + (30 - 25) * ((100vw - 320px) / (1920 - 320)));
+      [class="dark"] & {
+        display: none;
+      }
+    }
+    .logo-w {
+      display: none;
+      [class="dark"] & {
+        display: block;
+      }
     }
     h1,
     h2 {

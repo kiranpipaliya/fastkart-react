@@ -12,7 +12,8 @@
     position: absolute;
     right: 10px;
     top: 10px;
-    font-size: 25px;
+    color: rgba($title-color, 0.65);
+    font-size: calc(18px + (24 - 18) * ((100vw - 320px) / (1920 - 320)));
     [dir="rtl"] & {
       left: 10px;
       right: unset;
@@ -40,6 +41,7 @@
       text-align: right;
     }
     a {
+      font-weight: 600;
       margin-bottom: 5px;
       display: -webkit-box;
       -webkit-box-orient: vertical;
@@ -56,6 +58,7 @@
         align-items: center;
         justify-content: space-between;
         position: relative;
+        line-height: 22px;
         font-weight: 600;
 
         .plus-theme {
@@ -69,9 +72,9 @@
           right: -100px;
           opacity: 0;
           visibility: hidden;
-          bottom: 5px;
-          top: 0;
-          padding: 0 5px;
+          bottom: 3px;
+          top: -3px;
+          padding: 5px 5px;
           display: flex;
           align-items: center;
           justify-content: space-between;
@@ -105,8 +108,7 @@
           }
         }
         &.active {
-          height: calc(28px + (31 - 28) * ((100vw - 320px) / (1920 - 320)));
-          line-height: 22px;
+          line-height: calc(24px + (29 - 24) * ((100vw - 320px) / (1920 - 320)));
           display: block;
 
           .plus-theme {
@@ -137,13 +139,13 @@
           flex-direction: row-reverse;
         }
         span {
-          padding: 5px;
+          padding: 4px;
           background-color: $theme-color;
           border-radius: 6px;
           svg {
             stroke: $white;
-            width: calc(18px + (21 - 18) * ((100vw - 320px) / (1920 - 320)));
-            height: calc(18px + (21 - 18) * ((100vw - 320px) / (1920 - 320)));
+            width: calc(16px + (21 - 16) * ((100vw - 320px) / (1920 - 320)));
+            height: calc(16px + (21 - 16) * ((100vw - 320px) / (1920 - 320)));
             [class="dark"] & {
               stroke: $white-text-dark;
             }
@@ -167,7 +169,7 @@
       margin-top: calc(15px + (20 - 15) * ((100vw - 320px) / (1920 - 320)));
     }
     > a {
-      width: 80px;
+      width: 70px;
       height: auto;
       padding-right: calc(12px + (20 - 12) * ((100vw - 320px) / (1920 - 320)));
       border-right: 1px solid $border-color1;
@@ -181,25 +183,41 @@
         width: 100%;
       }
     }
+    .media-body {
+      width: calc(100% - 170px);
+      @media (max-width: 375px) {
+        width: calc(100% - 70px);
+      }
+      a {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 1;
+        overflow: hidden;
+      }
+    }
     .plus-minus {
       position: absolute;
       bottom: calc(15px + (25 - 15) * ((100vw - 320px) / (1920 - 320)));
       right: calc(15px + (25 - 15) * ((100vw - 320px) / (1920 - 320)));
+      [dir="rtl"] & {
+        left: calc(15px + (25 - 15) * ((100vw - 320px) / (1920 - 320)));
+        right: unset;
+      }
       @media only screen and (max-width: 375px) {
         position: relative;
         bottom: unset;
         right: unset;
         margin-top: 8px;
         display: inline-flex;
-      }
-      [dir="rtl"] & {
-        left: calc(15px + (25 - 15) * ((100vw - 320px) / (1920 - 320)));
-        right: unset;
+
+        [dir="rtl"] & {
+          left: unset;
+          right: 0;
+        }
       }
     }
     .media-body {
       > a {
-        display: block;
         margin-top: -5px;
         font-weight: 600;
       }

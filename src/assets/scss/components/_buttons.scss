@@ -2,7 +2,7 @@
   2.2 Buttons Css 
 ==========================*/
 .btn-solid {
-  padding: calc(10px + (14 - 10) * ((100vw - 320px) / (1920 - 320))) calc(28px + (34 - 28) * ((100vw - 320px) / (1920 - 320)));
+  padding: calc(8px + (14 - 8) * ((100vw - 320px) / (1920 - 320))) calc(20px + (34 - 20) * ((100vw - 320px) / (1920 - 320)));
   background-color: $theme-color;
   color: $white;
   font-size: calc(16px + (18 - 16) * ((100vw - 320px) / (1920 - 320)));

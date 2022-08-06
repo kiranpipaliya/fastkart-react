@@ -7,6 +7,7 @@
   }
   .offer-section {
     .coupon-ticket {
+      font-family: $font-2;
       background-color: $grey-light;
       padding: 20px calc(18px + (25 - 18) * ((100vw - 320px) / (1920 - 320)));
       position: relative;
@@ -66,6 +67,7 @@
               left: unset;
             }
           }
+
           h2,
           span {
             font-weight: 600;

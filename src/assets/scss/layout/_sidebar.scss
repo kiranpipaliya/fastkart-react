@@ -16,7 +16,7 @@
 }
 .header-sidebar {
   position: fixed;
-  left: -100%;
+  left: -320px;
   top: 0;
   bottom: 0;
   background-color: $white;
@@ -26,7 +26,7 @@
   transition: all 0.5s ease;
   z-index: 5;
   padding: 17px;
-  [dir='rtl'] & {
+  [dir="rtl"] & {
     left: unset;
     border-radius: 18px 0 0 18px;
     right: -320px;
@@ -37,13 +37,13 @@
   &.show {
     left: 0;
     transition: all 0.5s ease;
-    [dir='rtl'] & {
+    [dir="rtl"] & {
       left: unset;
       right: 0;
     }
   }
   .user-panel {
-    padding: 17px 0px 34px 0px;
+    padding: 17px 17px 15px 17px;
     text-align: center;
     margin-bottom: 15px;
     width: 100%;
@@ -62,7 +62,7 @@
       }
       .media-body {
         text-align: left;
-        [dir='rtl'] & {
+        [dir="rtl"] & {
           text-align: right;
         }
         > a {
@@ -98,6 +98,7 @@
           display: flex;
           align-items: center;
           padding: 0;
+          font-weight: 600;
           gap: 8px;
           color: $title-color;
           &:hover,
@@ -107,11 +108,6 @@
           i {
             font-size: 24px;
           }
-          svg {
-            width: 23px;
-            height: 23px;
-            stroke-width: 1.3px;
-          }
           img {
             width: 22px;
             height: 18px;
@@ -120,7 +116,7 @@
             line-height: 25px;
           }
         }
-        > span {
+        .arrow {
           width: 20px;
           height: 20px;
           border-radius: 100%;
@@ -132,7 +128,7 @@
           svg {
             width: 18px;
             height: 18px;
-            [dir='rtl'] & {
+            [dir="rtl"] & {
               transform-origin: center;
               transform: rotate(180deg);
             }
@@ -143,7 +139,7 @@
           background-color: $theme-color;
           .nav-link {
             color: $white-text-dark;
-            [class='dark'] & {
+            [class="dark"] & {
               color: $white-text-dark;
             }
           }
@@ -169,6 +165,7 @@
     padding: 13px;
     > span {
       font-weight: 600;
+      font-size: 16px;
       display: block;
       margin-bottom: 4px;
       margin-top: -4px;
@@ -177,11 +174,12 @@
       margin-bottom: 12px;
     }
     a {
-      padding: calc(8px + (12 - 8) * ((100vw - 320px) / (1920 - 320))) calc(28px + (34 - 28) * ((100vw - 320px) / (1920 - 320)));
-      font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (1920 - 320)));
+      padding: calc(6px + (10 - 6) * ((100vw - 320px) / (1920 - 320))) calc(20px + (26 - 20) * ((100vw - 320px) / (1920 - 320)));
+      font-size: 14px;
       line-height: 18px;
       color: $white-text-dark;
-      [class='dark'] & {
+      font-weight: 600;
+      [class="dark"] & {
         color: $white-text-dark;
       }
     }

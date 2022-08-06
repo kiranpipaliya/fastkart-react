@@ -43,6 +43,7 @@
       border-bottom: 2px solid transparent;
       padding: 6px calc(10px + (15 - 10) * ((100vw - 320px) / (1920 - 320)));
       transition: all 0.4s;
+      font-weight: normal;
       &.active {
         border-bottom-color: $theme-color;
       }

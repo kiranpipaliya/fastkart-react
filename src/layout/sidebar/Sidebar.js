@@ -1,11 +1,13 @@
-import React, { useCallback } from 'react';
+import React, { useCallback, useState } from 'react';
 import { MENUITEMS } from './menu';
 import { Link } from 'react-router-dom';
 import { ActiveNavLinkUrl } from '../../helper/activeNavUr';
 import { ChevronRight } from 'react-feather';
+import LanguageModal from '../../componants/ui/LangaugeModal';
 
 const Sidebar = (props) => {
   const sidebarShow = props.sideBarShow;
+  const [modalTrue, setModalTrue] = useState(false);
   const hideSidebarHandler = useCallback(
     (event) => {
       event.preventDefault();
@@ -13,8 +15,17 @@ const Sidebar = (props) => {
     },
     [sidebarShow],
   );
+  const modalHandler = () => {
+    setModalTrue(!modalTrue);
+    console.log(modalTrue);
+  };
+  const modalHideHandler = () => {
+    setModalTrue(!modalTrue);
+  };
   return (
-    <>
+    <React.Fragment>
+      {/* Language Modal */}
+      <LanguageModal modalHide={modalHideHandler} modalShow={modalTrue} />
       {/* <!-- Sidebar Start --> */}
       <a href='#' onClick={hideSidebarHandler} className={`overlay-sidebar ${sidebarShow ? 'show' : ''}`}></a>
       <aside className={`header-sidebar  ${sidebarShow ? 'show' : ''}`}>
@@ -22,7 +33,6 @@ const Sidebar = (props) => {
           <div className='user-panel'>
             <div className='media'>
               <a href='account.html'>
-                {' '}
                 <img src='assets/images/avatar/avatar.jpg' alt='avatar' />
               </a>
               <div className='media-body'>
@@ -52,7 +62,7 @@ const Sidebar = (props) => {
                   )}
                   {item.type === 'modal' && (
                     <>
-                      <Link to='#' className='nav-link title-color font-sm'>
+                      <Link onClick={modalHandler} to='#' className='nav-link title-color font-sm'>
                         <img src={`assets/icons/png/${item.icon}`} alt='flag' />
                         <span>{item.title}</span>
                       </Link>
@@ -67,7 +77,6 @@ const Sidebar = (props) => {
                         {item.icon}
                         <span>{item.title}</span>
                       </a>
-
                       <div className='dark-switch'>
                         <input id='rtlButton' type='checkbox' />
                         <span className='before-none'></span>
@@ -85,13 +94,12 @@ const Sidebar = (props) => {
           <span className='font-xs title-color'>Contact Support</span>
           <p className='content-color font-xs'>If you have any problem,queries or questions feel free to reach out</p>
           <a href='#' className='btn-solid'>
-            {' '}
-            Contact Us{' '}
+            Contact Us
           </a>
         </div>
       </aside>
       {/* <!-- Sidebar End --> */}
-    </>
+    </React.Fragment>
   );
 };
 

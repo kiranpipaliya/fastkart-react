@@ -156,14 +156,18 @@
       align-items: center;
       gap: calc(10px + (15 - 10) * ((100vw - 320px) / (1920 - 320)));
       margin-top: calc(15px + (20 - 15) * ((100vw - 320px) / (1920 - 320)));
-      overflow-x: hidden;
-
-      &:hover {
-        overflow-x: auto;
-      }
-
       @media only screen and (max-width: 767px) {
         overflow-x: auto;
+        &::-webkit-scrollbar {
+          width: 0 !important;
+          height: 0 !important;
+        }
+      }
+      .slick-track {
+        margin-left: -30px;
+        .slick-slide {
+          text-align: center;
+        }
       }
 
       .item {
@@ -308,15 +312,20 @@
       align-items: center;
       overflow-y: hidden;
       gap: calc(15px + (20 - 15) * ((100vw - 320px) / (1920 - 320)));
-      overflow-x: hidden;
       padding-left: 15px;
-
-      &:hover {
-        overflow-x: auto;
-      }
-
+      padding-right: 15px;
       @media only screen and (max-width: 767px) {
         overflow-x: auto;
+        &::-webkit-scrollbar {
+          width: 0 !important;
+          height: 0 !important;
+        }
+      }
+      .slick-track {
+        margin-left: -40px;
+        .slick-slide {
+          padding: 0 10px;
+        }
       }
 
       .cupon {
@@ -366,7 +375,7 @@
 
 .question-section {
   h5 {
-    font-size: 22px;
+    font-size: calc(18px + (22 - 18) * ((100vw - 320px) / (1920 - 320)));
     font-weight: 600;
     line-height: 28px;
     color: $content-light;

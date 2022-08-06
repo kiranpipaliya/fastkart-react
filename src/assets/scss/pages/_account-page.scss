@@ -29,7 +29,7 @@
             font-weight: 600;
             display: flex;
             flex-direction: column;
-            font-size: calc(18px + (20 - 18) * ((100vw - 320px) / (1920 - 320)));
+            font-size: calc(16px + (20 - 16) * ((100vw - 320px) / (1920 - 320)));
             span {
               font-weight: normal;
               display: inline-block;
@@ -53,24 +53,24 @@
           display: flex;
           align-items: center;
           padding: 0;
+          font-weight: 500;
           gap: 10px;
           &:hover,
           &:focus {
             color: $title-color;
           }
           i {
-            font-size: 24px;
+            font-size: calc(20px + (24 - 20) * ((100vw - 320px) / (1920 - 320)));
           }
           img {
             width: 22px;
             height: 18px;
           }
           span {
-            font-weight: normal;
-            font-size: calc(16px + (18 - 16) * ((100vw - 320px) / (1920 - 320)));
+            font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (1920 - 320)));
           }
         }
-        > span {
+        .arrow {
           width: 20px;
           height: 20px;
           border-radius: 100%;
@@ -86,6 +86,7 @@
           svg {
             width: 18px;
             height: 18px;
+            stroke: $theme-color;
           }
         }
       }
@@ -97,13 +98,14 @@
       border-radius: 9px;
       margin-top: 25px;
       display: flex;
+      font-size: calc(16px + (18 - 16) * ((100vw - 320px) / (1920 - 320)));
       align-items: center;
       gap: 8px;
       [class="dark"] & {
         color: $white-text-dark;
       }
       i {
-        font-size: 22px;
+        font-size: calc(20px + (22 - 20) * ((100vw - 320px) / (1920 - 320)));
         [dir="rtl"] & {
           transform: rotate(180deg);
         }

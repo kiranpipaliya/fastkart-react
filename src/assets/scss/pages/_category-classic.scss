@@ -10,6 +10,12 @@
       position: relative;
       background-color: $grey-light;
       border-radius: 8px;
+      a {
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
       @media only screen and (max-width: 375px) {
         align-items: center;
       }
@@ -19,22 +25,36 @@
           font-weight: 600;
           font-size: 15px;
           margin-bottom: 2px;
+          @media only screen and (max-width: 360px) {
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+          }
         }
         p {
           margin-bottom: 0;
+          overflow: hidden;
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
         }
       }
-      > svg {
-        width: 30px;
-        height: 30px;
+      .arrow-nav {
+        display: inline-block;
         margin-left: auto;
-        margin-right: -10px;
-        stroke: $theme-color;
+        margin-right: calc(-0px + (-10 + 0) * ((100vw - 320px) / (1920 - 320)));
+
         [dir="rtl"] & {
-          margin-left: -10px;
+          margin-left: calc(-0px + (-10 + 0) * ((100vw - 320px) / (1920 - 320)));
           margin-right: auto;
           transform-origin: center;
           transform: rotate(180deg);
+        }
+        svg {
+          width: calc(25px + (30 - 25) * ((100vw - 320px) / (1920 - 320)));
+          height: calc(25px + (30 - 25) * ((100vw - 320px) / (1920 - 320)));
+          stroke: $theme-color;
         }
       }
     }

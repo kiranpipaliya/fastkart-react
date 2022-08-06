@@ -47,16 +47,19 @@
             text-overflow: ellipsis;
             width: calc(150px + (375 - 150) * ((100vw - 320px) / (1920 - 320)));
             overflow: hidden;
+            line-height: 21px;
+            font-weight: 600;
             @media only screen and (max-width: 767px) {
               width: calc(150px + (995 - 150) * ((100vw - 320px) / (1920 - 320)));
             }
           }
         }
         .badges {
-          cursor: pointer;
           position: absolute;
           top: 0;
+          font-weight: 600;
           right: 0;
+          font-size: calc(12px + (14 - 12) * ((100vw - 320px) / (1920 - 320)));
           [dir="rtl"] & {
             right: unset;
             left: 0;

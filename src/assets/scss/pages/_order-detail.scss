@@ -58,20 +58,22 @@
             align-items: center;
             color: $white;
             justify-content: center;
+            flex-direction: column;
             border-radius: 5px;
             [class="dark"] & {
               color: $white-text-dark;
             }
           }
           svg {
-            width: calc(18px + (24 - 18) * ((100vw - 320px) / (1920 - 320)));
-            height: calc(18px + (24 - 18) * ((100vw - 320px) / (1920 - 320)));
+            width: calc(18px + (20 - 18) * ((100vw - 320px) / (1920 - 320)));
+            height: calc(18px + (20 - 18) * ((100vw - 320px) / (1920 - 320)));
           }
         }
         .media-body {
           h4 {
             margin-top: -5px;
-            width: 191px;
+            width: 220px;
+            font-weight: 600;
             overflow: hidden;
             text-overflow: ellipsis;
             white-space: nowrap;
@@ -126,7 +128,7 @@
     }
     .address {
       h4 {
-        font-weight: normal;
+        font-weight: 500;
         margin-top: -1px;
       }
       p {

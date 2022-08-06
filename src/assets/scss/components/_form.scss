@@ -3,6 +3,7 @@
 ==========================*/
 
 /// input style ///
+
 .custom-form {
   input,
   textarea,
@@ -38,6 +39,9 @@
         padding-left: calc(44px + (47 - 44) * ((100vw - 320px) / (1920 - 320)));
         padding-right: calc(15px + (18 - 15) * ((100vw - 320px) / (1920 - 320)));
       }
+    }
+    .showHidePassword {
+      cursor: pointer;
     }
     input[type="date" i]::-webkit-calendar-picker-indicator {
       position: absolute;
@@ -228,6 +232,15 @@
       }
     }
   }
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:active,
+input:-webkit-autofill:focus {
+  background-color: $theme-light-color !important;
+  color: $title-color !important;
+  -webkit-box-shadow: 0 0 0 1000px $theme-light-color inset !important;
+  -webkit-text-fill-color: $title-color !important;
 }
 
 /// Date Picker ///

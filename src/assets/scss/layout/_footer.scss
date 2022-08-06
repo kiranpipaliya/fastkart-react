@@ -18,16 +18,17 @@
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    margin-top: 8px;
     .footer-item {
-      opacity: 0.7;
       .footer-link {
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
         gap: 2px;
-        i,
-        svg {
+        position: relative;
+
+        i {
           font-size: 25px;
           color: $white;
         }
@@ -44,9 +45,29 @@
           margin-bottom: -3px;
           font-size: calc(12px + (15 - 12) * ((100vw - 320px) / (1920 - 320)));
         }
+        &::after {
+          content: "";
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 4px;
+          height: 4px;
+          display: block;
+          background-color: $white;
+          border-radius: 100%;
+          top: -8px;
+          opacity: 0;
+          transition: all 0.4s;
+        }
       }
-      &.active {
-        opacity: 1;
+
+      &.active,
+      &:hover {
+        .footer-link {
+          &::after {
+            opacity: 1;
+          }
+        }
       }
     }
   }
@@ -56,11 +77,13 @@
     max-width: calc(100vw - 30px);
     border-radius: 4px;
     bottom: calc(10px + (15 - 10) * ((100vw - 320px) / (1920 - 320)));
+    padding: calc(6px + (9 - 6) * ((100vw - 320px) / (1920 - 320))) 10px;
     @media only screen and (min-width: 767px) {
       max-width: calc(600px - calc(20px + (30 - 20) * ((100vw - 320px) / (1920 - 320))));
     }
     .footer {
       justify-content: space-between;
+      margin-top: 0;
       .footer-item {
         opacity: 1;
         display: flex;
@@ -81,15 +104,18 @@
           display: flex;
           align-items: center;
           gap: calc(5px + (10 - 5) * ((100vw - 320px) / (1920 - 320)));
-          [dir='rtl'] & {
+          @media only screen and (max-width: 400px) {
+            font-size: 14px !important;
+          }
+          [dir="rtl"] & {
             margin-left: -7px;
             margin-right: unset;
           }
           svg {
             margin-bottom: -2.2px;
-            width: calc(24px + (28 - 24) * ((100vw - 320px) / (1920 - 320)));
-            height: calc(24px + (28 - 24) * ((100vw - 320px) / (1920 - 320)));
-            [dir='rtl'] & {
+            width: calc(22px + (28 - 22) * ((100vw - 320px) / (1920 - 320)));
+            height: calc(22px + (28 - 22) * ((100vw - 320px) / (1920 - 320)));
+            [dir="rtl"] & {
               transform-origin: center;
               transform: rotate(180deg);
             }

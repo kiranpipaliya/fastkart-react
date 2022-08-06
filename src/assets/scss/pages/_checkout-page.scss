@@ -5,14 +5,61 @@
 /// Address1 Page Css Start ///
 .address1-page {
   padding: 0;
-  .map-section {
-    height: 50vh;
-    width: 100%;
-    canvas {
-      width: 100% !important;
+  .map-wrap {
+    position: relative;
+    .top-address {
+      padding: 8px calc(15px + (20 - 15) * ((100vw - 320px) / (1920 - 320)));
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background-color: $white;
+      border-radius: 5px;
+      position: absolute;
+      top: 10px;
+      z-index: 2;
+      width: fit-content;
+      left: 20px;
+      @media (max-width: 375px) {
+        width: 90%;
+      }
+      svg {
+        width: 20px;
+        height: 20px;
+      }
+      p {
+        margin-bottom: 0;
+        font-size: 14px;
+        font-weight: 500;
+      }
     }
-    .H_imprint {
-      display: none;
+    .map-section {
+      height: 50vh;
+      width: 100%;
+      canvas {
+        width: 100% !important;
+      }
+      .H_imprint {
+        display: none;
+      }
+    }
+    .navgator {
+      padding: 8px;
+      display: block;
+      background-color: $white;
+      position: absolute;
+      right: 20px;
+      bottom: 25px;
+      border-radius: 100px;
+      cursor: pointer;
+      [dir="rtl"] & {
+        left: 20px;
+        right: unset;
+      }
+      svg {
+        width: 22px;
+        height: 22px;
+        stroke: $content-color;
+      }
     }
   }
   .location-section {
@@ -107,7 +154,7 @@
             font-weight: 700;
           }
           i {
-            font-size: 24px;
+            font-size: calc(22px + (24 - 22) * ((100vw - 320px) / (1920 - 320)));
           }
         }
         h3 {
@@ -174,6 +221,8 @@
           &.net-banking {
             .row {
               > div {
+                display: flex;
+                align-items: center;
                 @media only screen and (max-width: 567px) {
                   width: 100%;
                 }
@@ -202,11 +251,12 @@
                 background-color: $theme-color;
                 transform: scale(0);
                 position: absolute;
-                right: -3px;
+                right: -4px;
                 top: -3px;
                 [dir="rtl"] & {
-                  left: -3px;
+                  left: -4px;
                   right: unset;
+                  border-radius: 5px 0px 5px 0px;
                 }
                 img {
                   width: 15px;
@@ -216,6 +266,17 @@
               .payment-card {
                 width: calc(40px + (50 - 40) * ((100vw - 320px) / (1920 - 320)));
                 height: auto;
+              }
+              .discovery {
+                [class="dark"] & {
+                  display: none;
+                }
+              }
+              .discovery-w {
+                display: none;
+                [class="dark"] & {
+                  display: block;
+                }
               }
               &.active {
                 border-color: $theme-color;
@@ -276,6 +337,7 @@
       text-align: center;
       margin-top: 17px;
       h1 {
+        text-transform: unset;
         font-weight: 700;
         font-family: $font-2;
       }
@@ -290,7 +352,7 @@
     align-items: center;
     justify-content: center;
     border-top: $border1;
-    gap: calc(15px + (30 - 15) * ((100vw - 320px) / (1920 - 320)));
+    gap: calc(20px + (50 - 20) * ((100vw - 320px) / (1920 - 320)));
     .media {
       > span {
         background-color: $theme-color;
@@ -311,6 +373,9 @@
         h2 {
           font-weight: 700;
           margin-bottom: calc(-5px + (-0 + 5) * ((100vw - 320px) / (1920 - 320)));
+        }
+        span {
+          font-size: calc(12px + (14 - 12) * ((100vw - 320px) / (1920 - 320)));
         }
       }
     }

@@ -9,7 +9,7 @@ const AppLayout = () => {
 
   const sideBarShowHandler = (showSidebar) => {
     setSidebarShow(!showSidebar);
-    document.body.classList.add('bluer');  
+    document.body.classList.add('bluer');
   };
   const sideBarHideHandler = (hideSidebar) => {
     setSidebarShow(!hideSidebar);

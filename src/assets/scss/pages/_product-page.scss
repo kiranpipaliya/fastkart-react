@@ -29,7 +29,7 @@
     margin-right: -15px;
     padding: 15px 15px 0 15px;
     h1 {
-      font-weight: 600;
+      font-weight: 700;
       color: $title-color;
       line-height: 20px;
       margin-top: -3px;
@@ -88,9 +88,9 @@
           width: 20px;
           height: 20px;
           margin-right: -6px;
+          transform-origin: center;
+          transform: rotate(90deg);
           [dir="rtl"] & {
-            transform-origin: center;
-            transform: rotate(180deg);
             margin-left: -6px;
             margin-right: auto;
           }
@@ -108,7 +108,7 @@
         h2 {
           margin-top: -3px;
           margin-bottom: 3px;
-          font-weight: 600;
+          font-weight: 700;
           font-size: calc(15px + (17 - 15) * ((100vw - 320px) / (1920 - 320)));
         }
       }
@@ -122,6 +122,7 @@
       justify-content: space-between;
       h3 {
         font-weight: 600;
+        font-size: calc(15px + (17 - 15) * ((100vw - 320px) / (1920 - 320)));
       }
       a {
         color: $theme-color;
@@ -158,6 +159,56 @@
           margin-bottom: 0;
           margin-top: 5px;
           margin-bottom: -2px;
+        }
+      }
+    }
+  }
+
+  .check-delivery-section {
+    .title-section {
+      margin-top: -3px;
+      h4 {
+        font-weight: 700;
+        margin-top: -6px;
+        margin-bottom: calc(0px + (3 - 0) * ((100vw - 320px) / (1920 - 320)));
+        font-size: calc(16px + (18 - 16) * ((100vw - 320px) / (1920 - 320)));
+      }
+    }
+    .custom-form {
+      position: relative;
+      a {
+        color: $theme-color;
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        [dir="rtl"] & {
+          right: unset;
+          left: 10px;
+        }
+      }
+    }
+    .service-section {
+      margin-top: 18px;
+      margin-bottom: -2px;
+      ul {
+        li {
+          color: $content-color;
+          display: flex;
+          align-items: center;
+          img {
+            margin-right: 10px;
+            [class="dark"] & {
+              filter: invert(1);
+            }
+            [dir="rtl"] & {
+              margin-right: 0;
+              margin-left: 10px;
+            }
+          }
+          + li {
+            margin-top: 8px;
+          }
         }
       }
     }

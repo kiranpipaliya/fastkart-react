@@ -39,9 +39,13 @@
             left: 0;
             right: unset;
           }
-          img {
-            width: calc(20px + (23 - 20) * ((100vw - 320px) / (1920 - 320)));
-            height: calc(20px + (23 - 20) * ((100vw - 320px) / (1920 - 320)));
+          svg {
+            width: calc(15px + (17 - 15) * ((100vw - 320px) / (1920 - 320)));
+            height: calc(15px + (17 - 15) * ((100vw - 320px) / (1920 - 320)));
+            stroke: $white;
+            [class="dark"] & {
+              stroke: $white-text-dark;
+            }
           }
         }
       }

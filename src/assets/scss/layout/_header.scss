@@ -15,12 +15,6 @@
       font-size: 24px;
       color: $title-color;
     }
-    svg {
-      width: 22px;
-      height: 22px;
-      stroke-width: 1.3px;
-      cursor: pointer;
-    }
     a {
       display: contents;
       font-weight: 600;
@@ -28,19 +22,38 @@
         font-weight: 200;
         font-size: 24px;
         cursor: pointer;
-        [dir='rtl'] & {
+        [dir="rtl"] & {
           transform-origin: center;
           transform: rotate(180deg);
         }
       }
     }
+
     .logo {
       width: calc(100px + (130 - 100) * ((100vw - 320px) / (1920 - 320)));
       height: auto;
+      [class="dark"] & {
+        display: none;
+      }
+    }
+    .logo-w {
+      display: none;
+      [class="dark"] & {
+        display: block;
+      }
     }
     .fk-logo {
       width: calc(24px + (34 - 24) * ((100vw - 320px) / (1920 - 320)));
       height: auto;
+      [class="dark"] & {
+        display: none;
+      }
+    }
+    .fk-logo-w {
+      display: none;
+      [class="dark"] & {
+        display: block;
+      }
     }
   }
 
@@ -54,17 +67,11 @@
       align-items: center;
       gap: calc(4px + (8 - 4) * ((100vw - 320px) / (1920 - 320)));
       font-weight: 700;
-      > svg {
-        width: 19px;
-        height: 19px;
-        stroke-width: 1.5px;
-      }
     }
 
     i {
       font-size: 22px;
     }
-
     a {
       svg {
         width: 20px;
@@ -77,6 +84,7 @@
       width: calc(35px + (45 - 35) * ((100vw - 320px) / (1920 - 320)));
       height: calc(35px + (45 - 35) * ((100vw - 320px) / (1920 - 320)));
       border-radius: 100%;
+      object-fit: contain;
     }
   }
 }
