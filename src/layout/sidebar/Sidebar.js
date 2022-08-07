@@ -1,9 +1,10 @@
 import React, { useCallback, useState } from 'react';
+
 import { MENUITEMS } from './menu';
 import { Link } from 'react-router-dom';
 import { ActiveNavLinkUrl } from '../../helper/activeNavUr';
 import { ChevronRight } from 'react-feather';
-import LanguageModal from '../../componants/ui/LangaugeModal';
+import LanguageModal from '../../components/ui/LangaugeModal';
 
 const Sidebar = (props) => {
   const sidebarShow = props.sideBarShow;
@@ -55,9 +56,9 @@ const Sidebar = (props) => {
                         {item.icon}
                         <span>{item.title}</span>
                       </Link>
-                      <span>
+                      <Link to={item.path} className='arrow'>
                         <ChevronRight />
-                      </span>
+                      </Link>
                     </>
                   )}
                   {item.type === 'modal' && (
@@ -66,17 +67,17 @@ const Sidebar = (props) => {
                         <img src={`assets/icons/png/${item.icon}`} alt='flag' />
                         <span>{item.title}</span>
                       </Link>
-                      <span>
+                      <Link to='#' className='arrow'>
                         <ChevronRight />
-                      </span>
+                      </Link>
                     </>
                   )}
                   {item.type === 'settingBtn' && (
                     <>
-                      <a href='#' className='nav-link title-color font-sm'>
+                      <Link to='#' className='nav-link title-color font-sm'>
                         {item.icon}
                         <span>{item.title}</span>
-                      </a>
+                      </Link>
                       <div className='dark-switch'>
                         <input id='rtlButton' type='checkbox' />
                         <span className='before-none'></span>
@@ -93,9 +94,9 @@ const Sidebar = (props) => {
         <div className='contact-us'>
           <span className='font-xs title-color'>Contact Support</span>
           <p className='content-color font-xs'>If you have any problem,queries or questions feel free to reach out</p>
-          <a href='#' className='btn-solid'>
+          <Link to='#' className='btn-solid'>
             Contact Us
-          </a>
+          </Link>
         </div>
       </aside>
       {/* <!-- Sidebar End --> */}

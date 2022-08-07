@@ -15,14 +15,30 @@
       font-size: 24px;
       color: $title-color;
     }
+    > svg {
+      width: 22px;
+      height: 22px;
+      stroke-width: 1.4px;
+      stroke-linejoin: round;
+    }
     a {
       display: contents;
       font-weight: 600;
+      > svg {
+        width: 22px;
+        height: 22px;
+        stroke-width: 1.4px;
+        stroke-linejoin: round;
+        [dir='rtl'] & {
+          transform-origin: center;
+          transform: rotate(180deg);
+        }
+      }
       i {
         font-weight: 200;
         font-size: 24px;
         cursor: pointer;
-        [dir="rtl"] & {
+        [dir='rtl'] & {
           transform-origin: center;
           transform: rotate(180deg);
         }
@@ -32,26 +48,26 @@
     .logo {
       width: calc(100px + (130 - 100) * ((100vw - 320px) / (1920 - 320)));
       height: auto;
-      [class="dark"] & {
+      [class='dark'] & {
         display: none;
       }
     }
     .logo-w {
       display: none;
-      [class="dark"] & {
+      [class='dark'] & {
         display: block;
       }
     }
     .fk-logo {
       width: calc(24px + (34 - 24) * ((100vw - 320px) / (1920 - 320)));
       height: auto;
-      [class="dark"] & {
+      [class='dark'] & {
         display: none;
       }
     }
     .fk-logo-w {
       display: none;
-      [class="dark"] & {
+      [class='dark'] & {
         display: block;
       }
     }
@@ -67,6 +83,10 @@
       align-items: center;
       gap: calc(4px + (8 - 4) * ((100vw - 320px) / (1920 - 320)));
       font-weight: 700;
+      svg {
+        width: 18px;
+        height: 18px;
+      }
     }
 
     i {
@@ -75,6 +95,9 @@
     a {
       svg {
         width: 20px;
+        height: 20px;
+        stroke-width: 1.4px;
+        stroke-linejoin: round;
       }
     }
     .lord-icon {

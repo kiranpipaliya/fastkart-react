@@ -1,7 +1,7 @@
 import React from 'react';
-import ProductSlider from '../general/ProductSlider';
-import TopTitle from '../general/TopTitle';
-import ProductCard from '../productCard/ProductCard';
+import ProductSlider from '../../general/ProductSlider';
+import TopTitle from '../../general/TopTitle';
+import ProductCard from '../../productCard/ProductCard';
 const ProductSliderSection = (props) => {
   return (
     <>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { RECENTLY_BOUGHT } from './recentlyBoutghtList';
-import Img from '../../utils/Img';
+import Img from '../../../utils/Img';
 const RecentlyBought = () => {
   return (
     <>

@@ -1,7 +1,7 @@
 import React from 'react';
-import HomeSlider from '../general/homeSlider/HomeSlider';
-import SearchBox from '../general/SearchBox';
-import Main from '../shell/Main';
+import HomeSlider from '../../general/homeSlider/HomeSlider';
+import SearchBox from '../../general/SearchBox';
+import Main from '../../shell/Main';
 import { EVERYDAY_ESSENTIALS_SECTION_LIST, EVERYDAY_ESSENTIALS_SECTION_TITLE, LOWEST_PRICE_SECTION_LIST, LOWEST_PRICE_SECTION_TITLE } from './lowestPriceSctionList';
 import ProductSliderSection from './LowestPriceSection';
 import OfferCouponSection from './OfferCoupnSection';

@@ -9,7 +9,7 @@
 
 .banner-section {
   .h-banner-slider {
-    [dir="rtl"] & {
+    [dir='rtl'] & {
       direction: ltr;
     }
   }
@@ -25,7 +25,7 @@
     overflow: hidden;
     position: relative;
 
-    [dir="rtl"] & {
+    [dir='rtl'] & {
       transform: scale(-1);
     }
 
@@ -35,7 +35,7 @@
       transform: translateY(-50%);
       padding: 18px;
 
-      [dir="rtl"] & {
+      [dir='rtl'] & {
         transform: translateY(-50%) scale(-1);
         text-align: right;
       }
@@ -47,7 +47,7 @@
         line-height: 25px;
         margin-bottom: -3px;
 
-        [class="dark"] & {
+        [class='dark'] & {
           color: $title-dark-color;
 
           &.font-white {
@@ -60,7 +60,7 @@
         margin-bottom: 10px;
         display: block;
 
-        [class="dark"] & {
+        [class='dark'] & {
           color: $content-dark-color;
 
           &.font-white {
@@ -74,14 +74,14 @@
         font-weight: bold;
         padding: calc(7px + (12 - 7) * ((100vw - 320px) / (1920 - 320))) calc(24px + (34 - 24) * ((100vw - 320px) / (1920 - 320)));
 
-        [class="dark"] & {
+        [class='dark'] & {
           color: $white-text-dark;
           border-color: #0baf9a;
         }
       }
 
       .btn-outline {
-        [class="dark"] & {
+        [class='dark'] & {
           color: #0baf9a;
           background-color: $white-text-dark;
           border-color: #0baf9a;
@@ -126,7 +126,7 @@
     padding: calc(15px + (18 - 15) * ((100vw - 320px) / (1920 - 320)));
     border-radius: 10px calc(37px + (65 - 37) * ((100vw - 320px) / (1920 - 320))) 10px 10px;
 
-    [dir="rtl"] & {
+    [dir='rtl'] & {
       border-radius: calc(37px + (65 - 37) * ((100vw - 320px) / (1920 - 320))) 10px 10px 10px;
     }
 
@@ -137,7 +137,7 @@
       top: 0;
       right: 0;
 
-      [dir="rtl"] & {
+      [dir='rtl'] & {
         right: unset;
         left: 0;
         transform-origin: center;
@@ -153,6 +153,7 @@
 
     .recently-list {
       display: flex;
+      overflow: auto;
       align-items: center;
       gap: calc(10px + (15 - 10) * ((100vw - 320px) / (1920 - 320)));
       margin-top: calc(15px + (20 - 15) * ((100vw - 320px) / (1920 - 320)));
@@ -353,7 +354,7 @@
             margin-top: 0;
             margin-bottom: 2px;
 
-            [class="dark"] & {
+            [class='dark'] & {
               color: $title-dark-color;
             }
           }
@@ -363,7 +364,7 @@
             min-width: max-content;
             margin-bottom: -4px;
 
-            [class="dark"] & {
+            [class='dark'] & {
               color: $content-dark-color;
             }
           }

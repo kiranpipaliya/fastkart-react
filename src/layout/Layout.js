@@ -1,10 +1,18 @@
 import React, { useState } from 'react';
-import { Outlet } from 'react-router-dom';
+import { Outlet, useLocation } from 'react-router-dom';
 import Footer from './footer/Footer';
 import Header from './header/Header';
+import Header2 from './header/Header2';
 import Sidebar from './sidebar/Sidebar';
 
 const AppLayout = () => {
+  const location = useLocation();
+  const path = location.pathname;
+  const pathArray = ['page-list', 'category-wide'];
+  const lastPth = path.substring(path.lastIndexOf('/') + 1);
+  const lastPathString = lastPth.replaceAll('-', ' ');
+  const ifPathIsPresent = pathArray.includes(lastPth);
+
   const [sideBarShow, setSidebarShow] = useState(false);
 
   const sideBarShowHandler = (showSidebar) => {
@@ -18,7 +26,7 @@ const AppLayout = () => {
 
   return (
     <>
-      <Header sideBar={sideBarShow} onSideBar={sideBarShowHandler} />
+      {ifPathIsPresent ? <Header2 pageName={lastPathString} /> : <Header sideBar={sideBarShow} onSideBar={sideBarShowHandler} />}
       <Sidebar sideBarShow={sideBarShow} sideBarHide={sideBarHideHandler} />
       <Footer />
       <Outlet />

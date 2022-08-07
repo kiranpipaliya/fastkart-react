@@ -1,6 +1,6 @@
 import React from 'react';
-import TopTitle from '../general/TopTitle';
-import ProductCardListType from '../productCard/ProductCardListType';
+import TopTitle from '../../general/TopTitle';
+import ProductCardListType from '../../productCard/ProductCardListType';
 import { SAY_HELLO_TO_OFFERS } from './sayHelloToOffersList';
 
 const SayHelloToOffers = () => {

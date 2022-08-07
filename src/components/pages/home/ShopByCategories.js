@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Row, Col } from 'reactstrap';
-import Img from '../../utils/Img';
+import Img from '../../../utils/Img';
 import { SHOP_BY_CATEGORIES } from './shopByCategoriesList';
 
 const ShopByCategories = () => {

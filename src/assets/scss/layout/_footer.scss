@@ -18,7 +18,7 @@
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    margin-top: 8px;
+    margin-top: 3px;
     .footer-item {
       .footer-link {
         display: flex;
@@ -32,9 +32,15 @@
           font-size: 25px;
           color: $white;
         }
+        svg {
+          stroke: $white;
+          stroke-width: 1.7px;
+          width: calc(20px + (24 - 20) * ((100vw - 320px) / (1920 - 320)));
+          height: calc(20px + (24 - 20) * ((100vw - 320px) / (1920 - 320)));
+        }
         .icon {
-          width: calc(30px + (32 - 30) * ((100vw - 320px) / (1920 - 320)));
-          height: calc(30px + (32 - 30) * ((100vw - 320px) / (1920 - 320)));
+          width: calc(28px + (32 - 28) * ((100vw - 320px) / (1920 - 320)));
+          height: calc(28px + (32 - 28) * ((100vw - 320px) / (1920 - 320)));
           margin-bottom: -7px;
         }
         .offer {
@@ -46,7 +52,7 @@
           font-size: calc(12px + (15 - 12) * ((100vw - 320px) / (1920 - 320)));
         }
         &::after {
-          content: "";
+          content: '';
           position: absolute;
           left: 50%;
           transform: translateX(-50%);
@@ -107,7 +113,7 @@
           @media only screen and (max-width: 400px) {
             font-size: 14px !important;
           }
-          [dir="rtl"] & {
+          [dir='rtl'] & {
             margin-left: -7px;
             margin-right: unset;
           }
@@ -115,7 +121,7 @@
             margin-bottom: -2.2px;
             width: calc(22px + (28 - 22) * ((100vw - 320px) / (1920 - 320)));
             height: calc(22px + (28 - 22) * ((100vw - 320px) / (1920 - 320)));
-            [dir="rtl"] & {
+            [dir='rtl'] & {
               transform-origin: center;
               transform: rotate(180deg);
             }

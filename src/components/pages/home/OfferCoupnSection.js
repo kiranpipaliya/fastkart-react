@@ -1,4 +1,4 @@
-import TopTitle from '../general/TopTitle';
+import TopTitle from '../../general/TopTitle';
 import { OFFER_COUPN } from './offerCoupnSectionList';
 
 const OfferCouponSection = () => {

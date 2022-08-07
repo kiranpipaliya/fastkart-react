@@ -13,13 +13,20 @@ const ProductSlider = (props) => {
         breakpoint: 576,
         settings: {
           slidesToShow: 2,
+          centerPadding: '50px',
+        },
+      },
+      {
+        breakpoint: 425,
+        settings: {
+          slidesToShow: 2,
         },
       },
       {
         breakpoint: 375,
         settings: {
           slidesToShow: 1,
-          centerPadding: '120px',
+          centerPadding: '80px',
         },
       },
     ],
