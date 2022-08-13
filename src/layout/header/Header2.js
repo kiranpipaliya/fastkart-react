@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { ArrowLeftCircle, Home } from 'react-feather';
 import { Link } from 'react-router-dom';
-const Header2 = (props) => {
-  const pageName = props.pageName;
+import CartContext from '../../context/cartContext/cartContext';
+import WishlistContext from '../../context/wishlistContext/wishlistContext';
 
+const Header2 = (props) => {
+  const wishListCtx = useContext(WishlistContext);
+  const cartCtx = useContext(CartContext);
+  const pageName = props.pageName;
   const CategoriesWidePageCondition = pageName === 'category wide';
   return (
     <>
@@ -18,7 +22,13 @@ const Header2 = (props) => {
               <img className='logo' src='assets/images/logo/Fastkart.png' alt='logo' />
             </Link>
           )}
-          {!CategoriesWidePageCondition && <h1 className='title-color font-md'>{props.pageName}</h1>}
+          {!CategoriesWidePageCondition && (
+            <h1 className='title-color font-md'>
+              {pageName}
+              {pageName === 'my wishlist' && <span className='font-sm content-color'>{`  ( ${wishListCtx.items.length} Items )`}</span>}
+              {pageName === 'my cart' && <span className='font-sm content-color'>{`  ( ${cartCtx.items.length} Items )`}</span>}
+            </h1>
+          )}
         </div>
         <div className='avatar-wrap'>
           {CategoriesWidePageCondition && (

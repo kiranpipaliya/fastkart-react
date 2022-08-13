@@ -8,7 +8,7 @@ import Sidebar from './sidebar/Sidebar';
 const AppLayout = () => {
   const location = useLocation();
   const path = location.pathname;
-  const pathArray = ['page-list', 'category-wide'];
+  const pathArray = ['page-list', 'category-wide', 'order-history', 'my-cart', 'my-wishlist'];
   const lastPth = path.substring(path.lastIndexOf('/') + 1);
   const lastPathString = lastPth.replaceAll('-', ' ');
   const ifPathIsPresent = pathArray.includes(lastPth);

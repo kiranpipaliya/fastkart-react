@@ -12,7 +12,7 @@ const SayHelloToOffers = () => {
           <TopTitle title='Say hello to Offers!' subTitle='Best price ever of all the time' link='See all' path={`${process.env.PUBLIC_URL}/offer`} />
           <div className='offer-wrap'>
             {SAY_HELLO_TO_OFFERS.map((item, i) => (
-              <ProductCardListType data={item} key={i} />
+              <ProductCardListType plusMins={true} data={item} key={i} />
             ))}
           </div>
         </div>

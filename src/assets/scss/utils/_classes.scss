@@ -231,6 +231,14 @@ $theme-bg-color: (
       stroke: $content-light;
       fill: $content-light;
     }
+    &.fill {
+      stroke: $rating;
+      fill: $rating;
+    }
+    &.empty {
+      stroke: $content-light;
+      fill: $content-light;
+    }
     width: calc(18px + (20 - 18) * ((100vw - 320px) / (1920 - 320)));
     height: calc(18px + (20 - 18) * ((100vw - 320px) / (1920 - 320)));
   }

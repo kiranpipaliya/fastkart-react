@@ -1,6 +1,7 @@
 import React, { useCallback } from 'react';
 import { Grid, MapPin } from 'react-feather';
 import { Link } from 'react-router-dom';
+
 const Header = (props) => {
   const sidebarVisible = props.sideBar;
   const passShowSideBar = useCallback(() => {

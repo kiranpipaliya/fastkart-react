@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Main from '../shell/Main';
+
 const PageNotFound = () => {
   return (
     <>
-      <Main className='error-404 '>
+      <main className='error-404 '>
         {/* <!-- Banner Start --> */}
         <div className='banner-box'>
           <img src='assets/images/banner/404.png' className='img-fluid' alt='404' />
@@ -19,7 +19,7 @@ const PageNotFound = () => {
             Back to Home
           </Link>
         </section>
-      </Main>
+      </main>
       {/* <!-- Main End --> */}
     </>
   );

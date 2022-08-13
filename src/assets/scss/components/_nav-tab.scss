@@ -11,6 +11,7 @@
   align-items: center;
   overflow-x: hidden;
   flex-wrap: nowrap;
+  border: none;
   gap: 15px;
   &:hover {
     overflow-x: auto;
@@ -24,6 +25,7 @@
     background-color: transparent;
     color: $title-color;
     font-weight: 600;
+    cursor: pointer;
     font-size: calc(15px + (18 - 15) * ((100vw - 320px) / (1920 - 320)));
     &.active {
       color: $theme-color !important;

@@ -15,10 +15,10 @@ const ProductCard = (props) => {
           <Link to={props.data.path} className='font-sm title-color'>
             {props.data.title}
           </Link>
-          <span className='content-color font-xs'>{props.data.qty}</span>
+          <span className='content-color font-xs'>{`${props.data.qty}g`}</span>
           <span className='title-color font-sm plus-item'>
-            {props.data.price}
-            <PlusMinus />
+            {`$${props.data.price}`}
+            <PlusMinus item={props.data} />
             <span className='plus-theme'>
               <Plus />
             </span>

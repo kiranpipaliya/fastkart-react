@@ -1,7 +1,6 @@
 import React from 'react';
 import HomeSlider from '../../general/homeSlider/HomeSlider';
 import SearchBox from '../../general/SearchBox';
-import Main from '../../shell/Main';
 import { EVERYDAY_ESSENTIALS_SECTION_LIST, EVERYDAY_ESSENTIALS_SECTION_TITLE, LOWEST_PRICE_SECTION_LIST, LOWEST_PRICE_SECTION_TITLE } from './lowestPriceSctionList';
 import ProductSliderSection from './LowestPriceSection';
 import OfferCouponSection from './OfferCoupnSection';
@@ -11,7 +10,7 @@ import SayHelloToOffers from './SayHelloToOffers';
 import ShopByCategories from './ShopByCategories';
 const Home = () => {
   return (
-    <Main className='index-page'>
+    <main className='main-wrap mb-xxl index-page'>
       <SearchBox />
       <HomeSlider />
       <RecentlyBought />
@@ -22,7 +21,7 @@ const Home = () => {
       <OfferCouponSection />
       <ProductSliderSection data={LOWEST_PRICE_SECTION_LIST} titleData={LOWEST_PRICE_SECTION_TITLE} />
       <QuestionSection />
-    </Main>
+    </main>
   );
 };
 export default Home;
