@@ -322,7 +322,7 @@
 /// Offer Canvas Start ///
 .offer-offcanvas {
   border: none;
-  height: auto;
+  height: auto !important;
   .offcanvas-header {
     background-color: $theme-color;
     border-radius: 15px 15px 0px 0px;

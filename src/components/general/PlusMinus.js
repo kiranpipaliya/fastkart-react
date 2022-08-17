@@ -1,39 +1,43 @@
-import React, { useRef, useState, useContext } from 'react';
+import React, { useRef, useState, useContext, useEffect } from 'react';
 import { Minus, Plus } from 'react-feather';
+import useItemInCart from '../../hook/ItemInCart';
 import CartContext from '../../context/cartContext/cartContext';
 
 const PlusMinus = (props) => {
+  const [ifCartItemInCart, cartItem] = useItemInCart(props.item.id);
   const counter = useRef(0);
-  let [count, setCount] = useState(props.item.amount);
+  const [count, setCount] = useState(0);
   const cartCtx = useContext(CartContext);
   const counterHandler = (event) => {
     event.preventDefault();
-    setCount(Number(event.target.value));
+    setCount(event.current.value);
   };
 
   const subHandler = () => {
-    props.cart && cartCtx.removeItem(props.item.id);
-
-    setCount(Number(count - 1));
-    if (count > 0) {
-      setCount(Number(count - 1));
+    if (count >= 1) {
+      cartCtx.removeItem(props.item.id);
+      setCount(count - 1);
     }
+    if (count === 0) props.onHide();
   };
   const addHandler = () => {
-    props.cart && cartCtx.addItem(props.item);
-    if (count < 10) {
-      setCount(Number(count + 1));
-    }
+    setCount(count + 1);
+    cartCtx.addItem(props.item, count + 1);
   };
+  useEffect(() => {
+    if (ifCartItemInCart && cartItem) {
+      setCount(cartItem.amount);
+    }
+  }, [cartItem, ifCartItemInCart]);
 
-  const classes = `plus-minus ${props.className}`;
+  const classes = `plus-minus ${props.className ? props.className : ''}`;
   return (
     <>
-      <div className={classes}>
+      <span className={classes}>
         <Minus onClick={subHandler} className='sub' />
-        <input ref={counter} value={props.item.amount} onChange={counterHandler} type='number' min='0' max='10' />
+        <input ref={counter} disabled value={count} onChange={counterHandler} type='number' min='0' max='10' />
         <Plus onClick={addHandler} className='add' />
-      </div>
+      </span>
     </>
   );
 };

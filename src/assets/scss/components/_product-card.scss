@@ -14,7 +14,7 @@
     top: 10px;
     color: rgba($title-color, 0.65);
     font-size: calc(18px + (24 - 18) * ((100vw - 320px) / (1920 - 320)));
-    [dir="rtl"] & {
+    [dir='rtl'] & {
       left: 10px;
       right: unset;
     }
@@ -37,7 +37,7 @@
   }
   .content-wrap {
     margin-bottom: -5px;
-    [dir="rtl"] & {
+    [dir='rtl'] & {
       text-align: right;
     }
     a {
@@ -80,7 +80,7 @@
           justify-content: space-between;
           transition: all 0.4s;
           width: 100%;
-          [dir="rtl"] & {
+          [dir='rtl'] & {
             flex-direction: row-reverse;
             left: -100px;
             right: 0;
@@ -91,7 +91,7 @@
             height: 100%;
             background-color: $theme-color;
             color: $white;
-            [class="dark"] & {
+            [class='dark'] & {
               color: $white-text-dark;
             }
           }
@@ -118,7 +118,7 @@
             opacity: 0;
             visibility: hidden;
             position: absolute;
-            [dir="rtl"] & {
+            [dir='rtl'] & {
               left: -100px;
               right: unset;
             }
@@ -128,14 +128,14 @@
             right: 0;
             opacity: 1;
             visibility: visible;
-            [dir="rtl"] & {
+            [dir='rtl'] & {
               left: 0;
               right: unset;
             }
           }
         }
 
-        [dir="rtl"] & {
+        [dir='rtl'] & {
           flex-direction: row-reverse;
         }
         span {
@@ -146,7 +146,7 @@
             stroke: $white;
             width: calc(16px + (21 - 16) * ((100vw - 320px) / (1920 - 320)));
             height: calc(16px + (21 - 16) * ((100vw - 320px) / (1920 - 320)));
-            [class="dark"] & {
+            [class='dark'] & {
               stroke: $white-text-dark;
             }
           }
@@ -173,7 +173,7 @@
       height: auto;
       padding-right: calc(12px + (20 - 12) * ((100vw - 320px) / (1920 - 320)));
       border-right: 1px solid $border-color1;
-      [dir="rtl"] & {
+      [dir='rtl'] & {
         padding-left: calc(12px + (20 - 12) * ((100vw - 320px) / (1920 - 320)));
         padding-right: unset;
         border-left: 2px solid $border-color1;
@@ -199,7 +199,7 @@
       position: absolute;
       bottom: calc(15px + (25 - 15) * ((100vw - 320px) / (1920 - 320)));
       right: calc(15px + (25 - 15) * ((100vw - 320px) / (1920 - 320)));
-      [dir="rtl"] & {
+      [dir='rtl'] & {
         left: calc(15px + (25 - 15) * ((100vw - 320px) / (1920 - 320)));
         right: unset;
       }
@@ -210,7 +210,7 @@
         margin-top: 8px;
         display: inline-flex;
 
-        [dir="rtl"] & {
+        [dir='rtl'] & {
           left: unset;
           right: 0;
         }
@@ -226,18 +226,18 @@
           display: block;
           font-size: calc(13px + (15 - 13) * ((100vw - 320px) / (1920 - 320))) !important;
         }
-        &:last-of-type {
-          display: flex;
-          align-items: center;
-          font-weight: 600;
-          gap: 10px;
-          .badges-round {
-            font-weight: normal;
-            color: $white;
-            font-size: 10px;
-            [class="dark"] & {
-              color: $white-text-dark;
-            }
+      }
+      .list-title {
+        display: flex;
+        align-items: center;
+        font-weight: 600;
+        gap: 10px;
+        .badges-round {
+          font-weight: normal;
+          color: $white;
+          font-size: 10px;
+          [class='dark'] & {
+            color: $white-text-dark;
           }
         }
       }

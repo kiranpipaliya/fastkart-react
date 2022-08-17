@@ -3,7 +3,7 @@ import WishlistContext from './wishlistContext';
 
 const initialState = {
   items: [
-    { id: 'w1', amount: 5, path: `${process.env.PUBLIC_URL}/offer`, image: 'assets/images/product/8.png', title: 'Assorted Capsicum Combo', qty: 500, price: 25.25, disc: '50% off' },
+    { id: 'w1', amount: 5, path: `${process.env.PUBLIC_URL}/offer`, image: 'assets/images/product/8.png', title: 'Assorted Capsicum Combo', qty: 500, price: 25.25, disc: 50 },
     {
       id: 'w2',
       amount: 5,
@@ -12,7 +12,7 @@ const initialState = {
       title: 'Assorted Capsicum Combo',
       qty: 500,
       price: 22.25,
-      disc: '50% off',
+      disc: 50,
     },
     {
       id: 'w2',
@@ -23,9 +23,9 @@ const initialState = {
       qty: 550,
       price: 35.21,
     },
-    { id: 'w4', amount: 2, path: `${process.env.PUBLIC_URL}/offer`, image: 'assets/images/product/8.png', title: 'Assorted Capsicum Combo', qty: 500, price: 35.15, disc: '50% off' },
+    { id: 'w4', amount: 2, path: `${process.env.PUBLIC_URL}/offer`, image: 'assets/images/product/8.png', title: 'Assorted Capsicum Combo', qty: 500, price: 35.15, disc: 50 },
     { id: 'w5', amount: 3, path: `${process.env.PUBLIC_URL}/offer`, image: 'assets/images/product/6.png', title: 'Assorted Capsicum Combo', qty: 600, price: 45.15 },
-    { id: 'w6', amount: 4, path: `${process.env.PUBLIC_URL}/offer`, image: 'assets/images/product/7.png', title: 'Assorted Capsicum Combo', qty: 550, price: 35.25, disc: '50% off' },
+    { id: 'w6', amount: 4, path: `${process.env.PUBLIC_URL}/offer`, image: 'assets/images/product/7.png', title: 'Assorted Capsicum Combo', qty: 550, price: 35.25, disc: 50 },
   ],
   totalAmount: 0,
 };

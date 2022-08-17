@@ -18,7 +18,6 @@ const Sidebar = (props) => {
   );
   const modalHandler = () => {
     setModalTrue(!modalTrue);
-    console.log(modalTrue);
   };
   const modalHideHandler = () => {
     setModalTrue(!modalTrue);

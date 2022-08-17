@@ -13,11 +13,11 @@ const ProductCardListType = (props) => {
             {props.data.title}
           </Link>
           <span className='content-color font-xs'>{`${props.data.qty}g`}</span>
-          <span className='title-color font-sm'>
+          <span className='title-color list-title font-sm'>
             {`$${props.data.price}`}
-            {props.data.disc && <span className='badges-round bg-theme-theme font-xs'>{`${props.data.disc} % off`}</span>}
+            {props.data.disc && <span className='badges-round bg-theme-theme font-xs'>{`${props.data.disc}% off`}</span>}
           </span>
-          {props.plusMins && <PlusMinus cart={props.cart} item={props.data} className='d-xs-none  d-inline-block' />}
+          {props.plusMins && <PlusMinus item={props.data} className='d-xs-none  d-inline-block' />}
         </div>
       </div>
     </>

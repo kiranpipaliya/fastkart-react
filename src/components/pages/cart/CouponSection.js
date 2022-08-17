@@ -1,10 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import OfferOffcanvas from '../../ui/offcanvas/OfferOffcanvas';
 const CouponSection = () => {
+  const [offerOffcanvasShow, setOfferOffcanvasShow] = useState(false);
+  const modalShowHandler = () => {
+    setOfferOffcanvasShow(!offerOffcanvasShow);
+  };
+  const hideHandler = (hide) => {
+    setOfferOffcanvasShow(!hide);
+  };
   return (
     <>
       <section className='pt-0 coupon-ticket-wrap'>
-        <div className='coupon-ticket' data-bs-toggle='offcanvas' data-bs-target='#offer-1' aria-controls='offer-1'>
+        <div onClick={modalShowHandler} className='coupon-ticket'>
           <div className='media'>
             <div className='off'>
               <span>50</span>
@@ -22,7 +30,9 @@ const CouponSection = () => {
             </div>
             <div className='code'>
               <span className='content-color'>Use Code: </span>
-              <Link to=''>SCD450</Link>
+              <Link onClick={(event) => event.preventDefault()} to=''>
+                SCD450
+              </Link>
             </div>
           </div>
           <div className='circle-5 left'>
@@ -35,6 +45,7 @@ const CouponSection = () => {
           </div>
         </div>
       </section>
+      <OfferOffcanvas onShow={offerOffcanvasShow} onHide={hideHandler} />
     </>
   );
 };

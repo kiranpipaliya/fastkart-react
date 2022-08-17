@@ -27,6 +27,12 @@ html {
   background-color: rgba(128, 128, 128, 0.363);
   border-radius: 100px;
 }
+.disabledCursor {
+  cursor: default;
+  pointer-events: none;
+  opacity: 0.8;
+  backface-visibility: hidden;
+}
 body {
   position: relative;
   font-size: 14px;
@@ -69,7 +75,9 @@ body {
     margin: 0 auto;
   }
 }
-
+.w-full {
+  width: 100%;
+}
 .custom-scroll-hidden {
   overflow-x: hidden;
   &:hover {

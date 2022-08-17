@@ -1,7 +1,7 @@
 import React from 'react';
 import HomeSlider from '../../general/homeSlider/HomeSlider';
 import SearchBox from '../../general/SearchBox';
-import { EVERYDAY_ESSENTIALS_SECTION_LIST, EVERYDAY_ESSENTIALS_SECTION_TITLE, LOWEST_PRICE_SECTION_LIST, LOWEST_PRICE_SECTION_TITLE } from './lowestPriceSctionList';
+import { EVERYDAY_ESSENTIALS, EVERYDAY_ESSENTIALS_TITLE, LOWEST_PRICE, LOWEST_PRICE_2, LOWEST_PRICE_TITLE } from './lowestPriceSctionList';
 import ProductSliderSection from './LowestPriceSection';
 import OfferCouponSection from './OfferCoupnSection';
 import QuestionSection from './QuestionSection';
@@ -16,10 +16,10 @@ const Home = () => {
       <RecentlyBought />
       <ShopByCategories />
       <SayHelloToOffers />
-      <ProductSliderSection data={LOWEST_PRICE_SECTION_LIST} titleData={LOWEST_PRICE_SECTION_TITLE} />
-      <ProductSliderSection data={EVERYDAY_ESSENTIALS_SECTION_LIST} titleData={EVERYDAY_ESSENTIALS_SECTION_TITLE} />
+      <ProductSliderSection data={LOWEST_PRICE} titleData={LOWEST_PRICE_TITLE} />
+      <ProductSliderSection data={EVERYDAY_ESSENTIALS} titleData={EVERYDAY_ESSENTIALS_TITLE} />
       <OfferCouponSection />
-      <ProductSliderSection data={LOWEST_PRICE_SECTION_LIST} titleData={LOWEST_PRICE_SECTION_TITLE} />
+      <ProductSliderSection data={LOWEST_PRICE_2} titleData={LOWEST_PRICE_TITLE} />
       <QuestionSection />
     </main>
   );

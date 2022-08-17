@@ -22,7 +22,7 @@
         }
         .media-body {
           text-align: left;
-          [dir="rtl"] & {
+          [dir='rtl'] & {
             text-align: right;
           }
           > a {
@@ -62,6 +62,12 @@
           i {
             font-size: calc(20px + (24 - 20) * ((100vw - 320px) / (1920 - 320)));
           }
+          svg {
+            width: 20px;
+            height: 20px;
+            stroke-width: 1.5px;
+            stroke-linejoin: round;
+          }
           img {
             width: 22px;
             height: 18px;
@@ -79,7 +85,7 @@
           align-items: center;
           justify-content: center;
           background-color: $theme-light-color;
-          [dir="rtl"] & {
+          [dir='rtl'] & {
             transform-origin: center;
             transform: rotate(180deg);
           }
@@ -101,12 +107,12 @@
       font-size: calc(16px + (18 - 16) * ((100vw - 320px) / (1920 - 320)));
       align-items: center;
       gap: 8px;
-      [class="dark"] & {
+      [class='dark'] & {
         color: $white-text-dark;
       }
       i {
         font-size: calc(20px + (22 - 20) * ((100vw - 320px) / (1920 - 320)));
-        [dir="rtl"] & {
+        [dir='rtl'] & {
           transform: rotate(180deg);
         }
       }
