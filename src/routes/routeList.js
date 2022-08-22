@@ -7,6 +7,9 @@ import Cart from '../components/pages/cart/Cart';
 import AboutUs from '../components/pages/aboutUs';
 import PageSList from '../components/pages/pages-list/PageList';
 import Account from '../components/pages/account/Account';
+import Address1 from '../components/pages/address/Address1';
+import DeliveryAddress from '../components/pages/address/DeliveryAddress';
+import Payment from '../components/pages/payment/payment';
 
 export const ROUTE_DATA = [
   { path: `${process.env.PUBLIC_URL}`, comment: <Home /> },
@@ -17,5 +20,8 @@ export const ROUTE_DATA = [
   { path: `${process.env.PUBLIC_URL}/about-us`, comment: <AboutUs /> },
   { path: `${process.env.PUBLIC_URL}/page-list`, comment: <PageSList /> },
   { path: `${process.env.PUBLIC_URL}/account`, comment: <Account /> },
+  { path: `${process.env.PUBLIC_URL}/address1`, comment: <Address1 /> },
+  { path: `${process.env.PUBLIC_URL}/delivery-address`, comment: <DeliveryAddress /> },
+  { path: `${process.env.PUBLIC_URL}/payment`, comment: <Payment /> },
   { path: `${process.env.PUBLIC_URL}/*`, comment: <PageNotFound /> },
 ];

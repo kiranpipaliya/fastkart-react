@@ -16,7 +16,7 @@ export const PAGES_LIST = [
     name: 'Address type 1',
   },
   {
-    path: 'address2',
+    path: 'delivery-address',
     name: 'Address type 2',
   },
   {

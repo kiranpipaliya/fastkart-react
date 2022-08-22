@@ -384,7 +384,7 @@
 
 /// Add Address Offcanvas Start ///
 .add-address {
-  height: auto;
+  height: auto !important;
   .offcanvas-header {
     h5 {
       margin-top: -4px;

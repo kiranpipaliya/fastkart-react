@@ -51,7 +51,7 @@
       bottom: 25px;
       border-radius: 100px;
       cursor: pointer;
-      [dir="rtl"] & {
+      [dir='rtl'] & {
         left: 20px;
         right: unset;
       }
@@ -86,7 +86,7 @@
             width: calc(17px + (20 - 17) * ((100vw - 320px) / (1920 - 320)));
             height: calc(17px + (20 - 17) * ((100vw - 320px) / (1920 - 320)));
             stroke: $white;
-            [class="dark"] & {
+            [class='dark'] & {
               stroke: $white-text-dark;
             }
             line {
@@ -113,6 +113,10 @@
             gap: 6px;
             i {
               font-size: 24px;
+            }
+            svg {
+              width: 20px;
+              height: 20px;
             }
           }
           p {
@@ -152,9 +156,16 @@
           gap: 8px;
           h2 {
             font-weight: 700;
+            text-transform: capitalize;
           }
           i {
             font-size: calc(22px + (24 - 22) * ((100vw - 320px) / (1920 - 320)));
+          }
+          svg {
+            width: 22px;
+            height: 22px;
+            stroke: $title-color;
+            stroke-width: 1.4px;
           }
         }
         h3 {
@@ -167,6 +178,7 @@
           margin-bottom: 0;
           line-height: 18px;
           font-weight: normal;
+          text-transform: lowercase;
         }
       }
       img {
@@ -174,7 +186,7 @@
         height: calc(80px + (100 - 80) * ((100vw - 320px) / (1920 - 320)));
         border-radius: 15px;
         margin-left: 10px;
-        [dir="rtl"] & {
+        [dir='rtl'] & {
           margin-right: 10px;
           margin-left: unset;
         }
@@ -209,7 +221,7 @@
             border-radius: 100%;
             background-position: center;
 
-            [class="dark"] & {
+            [class='dark'] & {
               background-color: $white-text-dark;
               filter: invert(1);
             }
@@ -253,7 +265,7 @@
                 position: absolute;
                 right: -4px;
                 top: -3px;
-                [dir="rtl"] & {
+                [dir='rtl'] & {
                   left: -4px;
                   right: unset;
                   border-radius: 5px 0px 5px 0px;
@@ -268,13 +280,13 @@
                 height: auto;
               }
               .discovery {
-                [class="dark"] & {
+                [class='dark'] & {
                   display: none;
                 }
               }
               .discovery-w {
                 display: none;
-                [class="dark"] & {
+                [class='dark'] & {
                   display: block;
                 }
               }
@@ -356,7 +368,7 @@
     .media {
       > span {
         background-color: $theme-color;
-        padding:  calc(5px + (8 - 5) * ((100vw - 320px) / (1920 - 320)));
+        padding: calc(5px + (8 - 5) * ((100vw - 320px) / (1920 - 320)));
         display: flex;
         align-items: center;
         justify-content: center;
@@ -364,7 +376,7 @@
         i {
           font-size: calc(22px + (28 - 22) * ((100vw - 320px) / (1920 - 320)));
           color: $white;
-          [class="dark"] & {
+          [class='dark'] & {
             color: $white-text-dark;
           }
         }

@@ -1,31 +1,7 @@
 import React, { useReducer } from 'react';
 import CartContext from './cartContext';
 const cartInitialState = {
-  items: [
-    // { id: 'w1', amount: 5, path: `${process.env.PUBLIC_URL}/offer`, image: 'assets/images/product/8.png', title: 'Assorted Capsicum Combo', qty: 500, priceMin: 25.25, price: 25.25, disc: 50 },
-    // {
-    //   id: 'w2',
-    //   amount: 5,
-    //   path: `${process.env.PUBLIC_URL}/offer`,
-    //   image: 'assets/images/product/6.png',
-    //   title: 'Assorted Capsicum Combo',
-    //   qty: 500,
-    //   priceMin: 22.25,
-    //   price: 22.25,
-    //   disc: 50,
-    // },
-    // {
-    //   id: 'w3',
-    //   amount: 5,
-    //   path: `${process.env.PUBLIC_URL}/offer`,
-    //   image: 'assets/images/product/7.png',
-    //   title: 'Assorted Capsicum Combo',
-    //   qty: 550,
-    //   priceMin: 35.21,
-    //   price: 35.21,
-    // },
-    // { id: 'w4', amount: 2, path: `${process.env.PUBLIC_URL}/offer`, image: 'assets/images/product/8.png', title: 'Assorted Capsicum Combo', qty: 500, priceMin: 35.15, price: 35.15, disc: 50 },
-  ],
+  items: [],
   totalAmount: 0,
   totalSave: 0,
   delivery: 50,

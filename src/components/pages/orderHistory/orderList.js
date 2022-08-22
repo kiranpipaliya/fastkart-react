@@ -1,7 +1,7 @@
 export const ORDER_LIST = [
   {
     path: `${process.env.PUBLIC_URL}/order-detail`,
-    path2: `${process.env.PUBLIC_URL}/address2`,
+    path2: `${process.env.PUBLIC_URL}/delivery-address`,
     id: 'ID: #5151515 ',
     date: 'Dt: 20 Dec, 2020',
     address: '8857 Morris Rd. ,Charlottesville',
@@ -13,7 +13,7 @@ export const ORDER_LIST = [
   },
   {
     path: `${process.env.PUBLIC_URL}/order-detail`,
-    path2: `${process.env.PUBLIC_URL}/address2`,
+    path2: `${process.env.PUBLIC_URL}/delivery-address`,
     id: 'ID: #5151515 ',
     date: 'Dt: 20 Dec, 2020',
     address: '8857 Morris Rd. ,Charlottesville',
@@ -25,7 +25,7 @@ export const ORDER_LIST = [
   },
   {
     path: `${process.env.PUBLIC_URL}/order-detail`,
-    path2: `${process.env.PUBLIC_URL}/address2`,
+    path2: `${process.env.PUBLIC_URL}/delivery-address`,
     id: 'ID: #5151515 ',
     date: 'Dt: 20 Dec, 2020',
     address: '8857 Morris Rd. ,Charlottesville',
@@ -37,7 +37,7 @@ export const ORDER_LIST = [
   },
   {
     path: `${process.env.PUBLIC_URL}/order-detail`,
-    path2: `${process.env.PUBLIC_URL}/address2`,
+    path2: `${process.env.PUBLIC_URL}/delivery-address`,
     id: 'ID: #5151515 ',
     date: 'Dt: 20 Dec, 2020',
     address: '8857 Morris Rd. ,Charlottesville',

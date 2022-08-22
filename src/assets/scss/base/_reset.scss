@@ -27,6 +27,9 @@ html {
   background-color: rgba(128, 128, 128, 0.363);
   border-radius: 100px;
 }
+.error {
+  color: red;
+}
 .disabledCursor {
   cursor: default;
   pointer-events: none;
