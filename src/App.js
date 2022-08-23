@@ -9,7 +9,7 @@ function App() {
     <WishlistProvider>
       <CartProvider>
         <AddressProvider>
-          <Routers />;
+          <Routers />
         </AddressProvider>
       </CartProvider>
     </WishlistProvider>

@@ -90,28 +90,30 @@ const AddressForm = (props) => {
       <Formik initialValues={initialValues} onSubmit={formSubmitHandler} validationSchema={validationSchema}>
         {(formik) => (
           <Form className='custom-form'>
-            <div className='input-box'>
-              <FormikControl control='input' name='name' type='text' placeholder='Name' className='form-control' />
-            </div>
-            <div className='input-box'>
-              <FormikControl control='input' name='address1' type='text' placeholder='1234 Main St' className='form-control' />
-            </div>
-            <div className='input-box'>
-              <FormikControl control='input' name='address2' type='text' placeholder='Apartment,studio, or floor' className='form-control' />
-            </div>
-            <div className='input-box'>
-              <FormikControl control='select' name='city' option={cityOption} className='select form-control' />
-            </div>
+            <div className='overflow-y-auto'>
+              <div className='input-box'>
+                <FormikControl control='input' name='name' type='text' placeholder='Name' className='form-control' />
+              </div>
+              <div className='input-box'>
+                <FormikControl control='input' name='address1' type='text' placeholder='1234 Main St' className='form-control' />
+              </div>
+              <div className='input-box'>
+                <FormikControl control='input' name='address2' type='text' placeholder='Apartment,studio, or floor' className='form-control' />
+              </div>
+              <div className='input-box'>
+                <FormikControl control='select' name='city' option={cityOption} className='select form-control' />
+              </div>
 
-            <div className='input-box'>
-              <FormikControl control='select' name='state' option={stateOption} className='select form-control' />
-            </div>
+              <div className='input-box'>
+                <FormikControl control='select' name='state' option={stateOption} className='select form-control' />
+              </div>
 
-            <div className='input-box'>
-              <FormikControl control='input' name='zip' type='number' placeholder='Zip' className='form-control' />
-            </div>
-            <div className='input-box  mb-0'>
-              <FormikControl control='select' name='type' option={addressType} className='select form-control' />
+              <div className='input-box'>
+                <FormikControl control='input' name='zip' type='number' placeholder='Zip' className='form-control' />
+              </div>
+              <div className='input-box  mb-0'>
+                <FormikControl control='select' name='type' option={addressType} className='select form-control' />
+              </div>
             </div>
             <div className='offcanvas-footer'>
               <div className='btn-box'>
