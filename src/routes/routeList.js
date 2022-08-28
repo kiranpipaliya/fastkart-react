@@ -10,6 +10,7 @@ import Account from '../components/pages/account/Account';
 import Address1 from '../components/pages/address/Address1';
 import DeliveryAddress from '../components/pages/address/DeliveryAddress';
 import Payment from '../components/pages/payment/payment';
+import CategoriesClassic from '../components/pages/categories-classic';
 
 export const ROUTE_DATA = [
   { path: `${process.env.PUBLIC_URL}`, comment: <Home /> },
@@ -23,5 +24,6 @@ export const ROUTE_DATA = [
   { path: `${process.env.PUBLIC_URL}/address1`, comment: <Address1 /> },
   { path: `${process.env.PUBLIC_URL}/delivery-address`, comment: <DeliveryAddress /> },
   { path: `${process.env.PUBLIC_URL}/payment`, comment: <Payment /> },
+  { path: `${process.env.PUBLIC_URL}/category-classic`, comment: <CategoriesClassic /> },
   { path: `${process.env.PUBLIC_URL}/*`, comment: <PageNotFound /> },
 ];
