@@ -20,7 +20,7 @@ export const PAGES_LIST = [
     name: 'Address type 2',
   },
   {
-    path: 'cart',
+    path: 'my-cart',
     name: 'Cart',
   },
   {

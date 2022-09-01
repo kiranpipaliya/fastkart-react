@@ -11,6 +11,10 @@ import Address1 from '../components/pages/address/Address1';
 import DeliveryAddress from '../components/pages/address/DeliveryAddress';
 import Payment from '../components/pages/payment/payment';
 import CategoriesClassic from '../components/pages/categories-classic';
+import ForgotPassword from '../components/pages/auth/Forgot-password';
+import Login from '../components/pages/auth/Login';
+import Register from '../components/pages/auth/Register';
+import Help from '../components/pages/help';
 
 export const ROUTE_DATA = [
   { path: `${process.env.PUBLIC_URL}`, comment: <Home /> },
@@ -25,5 +29,9 @@ export const ROUTE_DATA = [
   { path: `${process.env.PUBLIC_URL}/delivery-address`, comment: <DeliveryAddress /> },
   { path: `${process.env.PUBLIC_URL}/payment`, comment: <Payment /> },
   { path: `${process.env.PUBLIC_URL}/category-classic`, comment: <CategoriesClassic /> },
+  { path: `${process.env.PUBLIC_URL}/forgot-password`, comment: <ForgotPassword /> },
+  { path: `${process.env.PUBLIC_URL}/login`, comment: <Login /> },
+  { path: `${process.env.PUBLIC_URL}/register`, comment: <Register /> },
+  { path: `${process.env.PUBLIC_URL}/help`, comment: <Help /> },
   { path: `${process.env.PUBLIC_URL}/*`, comment: <PageNotFound /> },
 ];
