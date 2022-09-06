@@ -15,6 +15,7 @@ import ForgotPassword from '../components/pages/auth/Forgot-password';
 import Login from '../components/pages/auth/Login';
 import Register from '../components/pages/auth/Register';
 import Help from '../components/pages/help';
+import Notification from '../components/pages/notification';
 
 export const ROUTE_DATA = [
   { path: `${process.env.PUBLIC_URL}`, comment: <Home /> },
@@ -33,5 +34,6 @@ export const ROUTE_DATA = [
   { path: `${process.env.PUBLIC_URL}/login`, comment: <Login /> },
   { path: `${process.env.PUBLIC_URL}/register`, comment: <Register /> },
   { path: `${process.env.PUBLIC_URL}/help`, comment: <Help /> },
+  { path: `${process.env.PUBLIC_URL}/notification`, comment: <Notification /> },
   { path: `${process.env.PUBLIC_URL}/*`, comment: <PageNotFound /> },
 ];
