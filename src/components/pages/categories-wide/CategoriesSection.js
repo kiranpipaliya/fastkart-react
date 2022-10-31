@@ -1,22 +1,15 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Img from '../../../utils/Img';
 import { FILTER_LIST } from './filterList';
 import { PRODUCT_LIST } from './productList';
 import { Row, Col, Nav, TabContent, TabPane, NavLink, NavItem } from 'reactstrap';
 import SimpleProduct from '../../productCard/SimpleProduct';
+import useShowClass from '../../../hook/showAnimation';
 
 const CategoriesSection = () => {
   const [navActive, setNanActive] = useState(0);
-  const [show, setShow] = useState('');
-
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      setShow('show');
-    }, 200);
-
-    return () => clearTimeout(timeout);
-  }, [show]);
+  const [show, setShow] = useShowClass('show');
 
   const navShowHandler = (i) => {
     setNanActive(i);

@@ -9,11 +9,11 @@ import Sidebar from './sidebar/Sidebar';
 const AppLayout = () => {
   const location = useLocation();
   const path = location.pathname;
-  const pathArray = ['page-list', 'category-wide', 'order-history', 'my-cart', 'my-wishlist', ' about-us', 'pages-list', 'account', 'delivery-address'];
+  const pathArray = ['order-detail', 'page-list', 'category-wide', 'order-history', 'my-cart', 'my-wishlist', ' about-us', 'pages-list', 'account', 'delivery-address'];
   const lastPth = path.substring(path.lastIndexOf('/') + 1);
   const lastPathString = lastPth.replaceAll('-', ' ');
   const ifPathIsPresent = pathArray.includes(lastPth);
-  const FooterBtn = lastPth === 'my-cart' || lastPth === 'delivery-address';
+  const FooterBtn = lastPth === 'order-detail' || lastPth === 'my-cart' || lastPth === 'delivery-address';
 
   const [sideBarShow, setSidebarShow] = useState(false);
 

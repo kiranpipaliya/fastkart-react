@@ -1,7 +1,7 @@
 export const LOWEST_PRICE = [
   {
     id: 'c1',
-    path: `${process.env.PUBLIC_URL}/offer`,
+    path: `${process.env.PUBLIC_URL}/product`,
     image: 'assets/images/product/13.png',
     title: 'Assorted Capsicum Combo',
     qty: 500,
@@ -9,10 +9,10 @@ export const LOWEST_PRICE = [
     disc: 50,
     alt: 'product',
   },
-  { id: 'c2', path: `${process.env.PUBLIC_URL}/offer`, image: 'assets/images/product/14.png', title: 'Assorted Capsicum Combo', qty: 550, price: 35.25, disc: 50, amount: 0, alt: 'product' },
+  { id: 'c2', path: `${process.env.PUBLIC_URL}/product`, image: 'assets/images/product/14.png', title: 'Assorted Capsicum Combo', qty: 550, price: 35.25, disc: 50, amount: 0, alt: 'product' },
   {
     id: 'c3',
-    path: `${process.env.PUBLIC_URL}/offer`,
+    path: `${process.env.PUBLIC_URL}/product`,
     image: 'assets/images/product/11.png',
     title: 'Assorted Capsicum Combo',
     qty: 600,
@@ -22,7 +22,7 @@ export const LOWEST_PRICE = [
   },
   {
     id: 'c4',
-    path: `${process.env.PUBLIC_URL}/offer`,
+    path: `${process.env.PUBLIC_URL}/product`,
     image: 'assets/images/product/12.png',
     title: 'Assorted Capsicum Combo',
     qty: 615,
@@ -34,7 +34,7 @@ export const LOWEST_PRICE = [
 export const LOWEST_PRICE_2 = [
   {
     id: 'c156',
-    path: `${process.env.PUBLIC_URL}/offer`,
+    path: `${process.env.PUBLIC_URL}/product`,
     image: 'assets/images/product/13.png',
     title: 'Assorted Capsicum Combo',
     qty: 500,
@@ -42,10 +42,20 @@ export const LOWEST_PRICE_2 = [
     disc: 50,
     alt: 'product',
   },
-  { id: 'c215', path: `${process.env.PUBLIC_URL}/offer`, image: 'assets/images/product/14.png', title: 'Assorted Capsicum Combo', qty: 550, price: 35.25, disc: 50, amount: 0, alt: 'product' },
+  {
+    id: 'c215',
+    path: `${process.env.PUBLIC_URL}/product`,
+    image: 'assets/images/product/14.png',
+    title: 'Assorted Capsicum Combo',
+    qty: 550,
+    price: 35.25,
+    disc: 50,
+    amount: 0,
+    alt: 'product',
+  },
   {
     id: 'c325',
-    path: `${process.env.PUBLIC_URL}/offer`,
+    path: `${process.env.PUBLIC_URL}/product`,
     image: 'assets/images/product/11.png',
     title: 'Assorted Capsicum Combo',
     qty: 600,
@@ -55,7 +65,7 @@ export const LOWEST_PRICE_2 = [
   },
   {
     id: 'c425',
-    path: `${process.env.PUBLIC_URL}/offer`,
+    path: `${process.env.PUBLIC_URL}/product`,
     image: 'assets/images/product/12.png',
     title: 'Assorted Capsicum Combo',
     qty: 615,
@@ -75,7 +85,7 @@ export const LOWEST_PRICE_TITLE = {
 export const EVERYDAY_ESSENTIALS = [
   {
     id: 'c5',
-    path: `${process.env.PUBLIC_URL}/offer`,
+    path: `${process.env.PUBLIC_URL}/product`,
     image: 'assets/images/product/11.png',
     title: 'Assorted Capsicum Combo',
     qty: 500,
@@ -85,7 +95,7 @@ export const EVERYDAY_ESSENTIALS = [
   },
   {
     id: 'c6',
-    path: `${process.env.PUBLIC_URL}/offer`,
+    path: `${process.env.PUBLIC_URL}/product`,
     image: 'assets/images/product/13.png',
     title: 'Assorted Capsicum Combo',
     qty: 550,
@@ -96,7 +106,7 @@ export const EVERYDAY_ESSENTIALS = [
 
   {
     id: 'c7',
-    path: `${process.env.PUBLIC_URL}/offer`,
+    path: `${process.env.PUBLIC_URL}/product`,
     image: 'assets/images/product/12.png',
     title: 'Assorted Capsicum Combo',
     qty: 600,
@@ -107,7 +117,7 @@ export const EVERYDAY_ESSENTIALS = [
   },
   {
     id: 'c8',
-    path: `${process.env.PUBLIC_URL}/offer`,
+    path: `${process.env.PUBLIC_URL}/product`,
     image: 'assets/images/product/14.png',
     title: 'Assorted Capsicum Combo',
     qty: 615,

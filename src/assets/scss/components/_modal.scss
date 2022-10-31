@@ -195,7 +195,10 @@
 
 /// Offer Filter Start ///
 .offer-filter {
-  .offcanvas-body {
+  &.offcanvas-bottom{
+    height: unset;
+    max-height: unset;
+  }  .offcanvas-body {
     height: auto;
     max-height: 372px;
   }

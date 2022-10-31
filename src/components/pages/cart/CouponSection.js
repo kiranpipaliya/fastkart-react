@@ -1,8 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import OfferOffcanvas from '../../ui/offcanvas/OfferOffcanvas';
+
+import OfferContext from '../../../context/offerContext/offerContext';
 const CouponSection = () => {
   const [offerOffcanvasShow, setOfferOffcanvasShow] = useState(false);
+  const offerCtx = useContext(OfferContext);
+  const offerItem = offerCtx.items[0];
+
   const modalShowHandler = () => {
     setOfferOffcanvasShow(!offerOffcanvasShow);
   };
@@ -15,15 +20,15 @@ const CouponSection = () => {
         <div onClick={modalShowHandler} className='coupon-ticket'>
           <div className='media'>
             <div className='off'>
-              <span>50</span>
+              <span>{offerItem.disc}</span>
               <span>
                 <span>%</span>
                 <span>OFF</span>
               </span>
             </div>
             <div className='media-body'>
-              <h2 className='title-color'>on your first order</h2>
-              <span className='content-color'>on order above $250.00</span>
+              <h2 className='title-color'>{offerItem.title}</h2>
+              <span className='content-color'>{offerItem.subTitle}</span>
             </div>
             <div className='big-circle'>
               <span></span>
@@ -31,7 +36,7 @@ const CouponSection = () => {
             <div className='code'>
               <span className='content-color'>Use Code: </span>
               <Link onClick={(event) => event.preventDefault()} to=''>
-                SCD450
+                {offerItem.code}
               </Link>
             </div>
           </div>
@@ -45,7 +50,7 @@ const CouponSection = () => {
           </div>
         </div>
       </section>
-      <OfferOffcanvas onShow={offerOffcanvasShow} onHide={hideHandler} />
+      <OfferOffcanvas data={offerItem} onShow={offerOffcanvasShow} onHide={hideHandler} />
     </>
   );
 };

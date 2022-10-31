@@ -34,9 +34,12 @@
           display: flex;
           align-items: center;
           justify-content: center;
-          i {
+          i,
+          svg {
+            width: 24px;
+            height: 24px;
             font-size: 28px;
-            [class="dark"] & {
+            [class='dark'] & {
               color: $title-dark-color;
             }
           }
@@ -60,7 +63,7 @@
           font-weight: 600;
           right: 0;
           font-size: calc(12px + (14 - 12) * ((100vw - 320px) / (1920 - 320)));
-          [dir="rtl"] & {
+          [dir='rtl'] & {
             right: unset;
             left: 0;
           }

@@ -1,45 +1,82 @@
-const NOTIF_LIST = [
-  { heading: 'Yesterday', title: 'UPTO 40% OFF, Sales Ends', subTitle: '3.00pm, 10 July, 2021', label: 'offer' },
-  {
-    title: 'FLAT 30% OFF, Sales Ends',
-    subTitle: '5.00pm, 10 July, 2021',
-    label: 'offer',
-  },
+export const NOTIF_FILTER = ['Alerts', 'Offers'];
 
-  { heading: 'Last 7 Days', title: 'UPTO 40% OFF, Sales Ends', subTitle: '3.00pm, 10 July, 2021', label: 'offer' },
+export const NOTIF_LIST = [
   {
-    title: 'Password Successfully Changed',
-    subTitle: '8.00am, 15 Jan, 2021',
-    label: 'Signin',
+    id: 'noti1',
+    heading: 'Yesterday',
+    item: [
+      { id: 'n1', title: 'UPTO 40% OFF, Sales Ends', subTitle: '3.00pm, 10 July, 2021', label: 'offer', icon: 'Discount', color: 'blue' },
+      {
+        id: 'n2',
+        title: 'FLAT 30% OFF, Sales Ends',
+        subTitle: '5.00pm, 10 July, 2021',
+        label: 'offer',
+        icon: 'Ticket',
+        color: 'yellow-light',
+      },
+    ],
   },
   {
-    title: '$200 top up successfully',
-    subTitle: '9.00am, 10 Jan, 2021',
-    label: 'Topup',
-  },
-  {
-    title: 'UPTO 40% OFF, Sales Ends',
-    subTitle: '3.00pm, 10 July, 2021',
-    label: 'offer',
-  },
-  {
-    title: 'FLAT 30% OFF, Sales Ends',
-    subTitle: '5.00pm, 05 July, 2021',
-    label: 'offer',
-  },
-  {
-    title: 'Password Successfully Changed',
-    subTitle: '3.00pm, 10 July, 2021',
-    label: 'Signin',
-  },
-  {
-    title: '$200 top up successfully',
-    subTitle: '9.00am, 10 Jan, 2021',
-    label: 'Topup',
-  },
-  {
-    title: 'UPTO 40% OFF, Sales Ends',
-    subTitle: '3.00pm, 10 July, 2021',
-    label: 'offer',
+    id: 'noti2',
+    heading: 'Last 7 Days',
+    item: [
+      { id: 'n3', heading: 'Last 7 Days', title: 'UPTO 40% OFF, Sales Ends', subTitle: '3.00pm, 10 July, 2021', label: 'offer', icon: 'Password', color: 'orange-light' },
+      {
+        id: 'n4',
+        title: 'Password Successfully Changed',
+        subTitle: '8.00am, 15 Jan, 2021',
+        label: 'Signin',
+        icon: 'Ticket-Star',
+        color: 'purple',
+      },
+      {
+        id: 'n5',
+        title: '$200 top up successfully',
+        subTitle: '9.00am, 10 Jan, 2021',
+        label: 'Topup',
+        icon: 'Discount',
+        color: 'blue',
+      },
+      {
+        id: 'n6',
+        title: 'UPTO 40% OFF, Sales Ends',
+        subTitle: '3.00pm, 10 July, 2021',
+        label: 'offer',
+        icon: 'Ticket',
+        color: 'yellow-light',
+      },
+      {
+        id: 'n7',
+        title: 'FLAT 30% OFF, Sales Ends',
+        subTitle: '5.00pm, 05 July, 2021',
+        label: 'offer',
+        icon: 'Password',
+        color: 'orange-light',
+      },
+      {
+        id: 'n8',
+        title: 'Password Successfully Changed',
+        subTitle: '3.00pm, 10 July, 2021',
+        label: 'Signin',
+        icon: 'Ticket-Star',
+        color: 'purple',
+      },
+      {
+        id: 'n9',
+        title: '$200 top up successfully',
+        subTitle: '9.00am, 10 Jan, 2021',
+        label: 'Topup',
+        icon: 'Discount',
+        color: 'blue',
+      },
+      {
+        id: 'n10',
+        title: 'UPTO 40% OFF, Sales Ends',
+        subTitle: '3.00pm, 10 July, 2021',
+        label: 'offer',
+        icon: 'Ticket',
+        color: 'yellow-light',
+      },
+    ],
   },
 ];

@@ -2,21 +2,15 @@ import React, { useState, useEffect } from 'react';
 import SearchBox from '../../general/SearchBox';
 import { NAV_LIST, QUESTIONS_ANS } from './navList';
 import { Nav, NavItem, NavLink, TabContent, TabPane, Accordion, AccordionBody, AccordionHeader, AccordionItem } from 'reactstrap';
+import useShowClass from '../../../hook/showAnimation';
 const Help = () => {
   const [navTabActive, setNavTabActive] = useState(0);
-  const [navTabContentShow, setNavTabContentShow] = useState('show');
+  const [show, setShow] = useShowClass('show');
   const [open, setOpen] = useState('0');
-  useEffect(() => {
-    console.log('200');
-    const timer = setTimeout(() => {
-      setNavTabContentShow('show');
-    }, 200);
-    return () => clearTimeout(timer);
-  }, [navTabContentShow]);
 
   const tabActiveHandler = (i) => {
     setNavTabActive(i);
-    setNavTabContentShow('');
+    setShow('');
   };
 
   const toggle = (id) => {
@@ -50,7 +44,7 @@ const Help = () => {
           <TabContent className='ratio2_1' activeTab={`${navTabActive}`}>
             <h1 className='font-md fw-600'>Frequently Asked Questions</h1>
             {NAV_LIST.map((_, j) => (
-              <TabPane className={`fade ${navTabActive === j && navTabContentShow}`} key={j} tabId={`${j}`}>
+              <TabPane className={`fade ${navTabActive === j && show}`} key={j} tabId={`${j}`}>
                 <Accordion open={open} toggle={toggle}>
                   {QUESTIONS_ANS.map((item, i) => (
                     <AccordionItem key={i}>

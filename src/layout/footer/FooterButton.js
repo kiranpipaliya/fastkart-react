@@ -24,6 +24,11 @@ const FooterButton = (props) => {
             Proceed to Payment
           </Link>
         )}
+        {props.pageName === 'order-detail' && (
+          <Link to={`${process.env.PUBLIC_URL}/shop`} className={`${btnDisabledAddress && 'disabledCursor'} font-md'`}>
+            Reorder
+          </Link>
+        )}
       </footer>
     </>
   );

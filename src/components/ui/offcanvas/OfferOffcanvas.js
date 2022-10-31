@@ -1,7 +1,9 @@
 import React from 'react';
 import { Offcanvas, OffcanvasBody } from 'reactstrap';
 const OfferOffcanvas = (props) => {
-  const hideOffcanvas = () => {
+  const hideOffcanvas = (e) => {
+    const code = e.target.closest('.code').querySelector('strong').innerText;
+    navigator.clipboard.writeText(code);
     props.onHide(props.onShow);
   };
   return (
@@ -9,12 +11,12 @@ const OfferOffcanvas = (props) => {
       <Offcanvas isOpen={props.onShow} toggle={hideOffcanvas} direction='bottom' className='offcanvas offer-offcanvas offcanvas-bottom'>
         <div className='offcanvas-header w-full'>
           <h5 className='offcanvas-title font-lg d-block' id='offer-1Label'>
-            Flat 50% off
+            Flat {props.data.disc}% off
           </h5>
-          <span className='font-sm'>on order above $250.00</span>
+          <span className='font-sm'>{props.data.subTitle}</span>
           <div className='code' onClick={hideOffcanvas}>
             <span className='font-sm'>
-              Code: <strong> SCD450</strong>
+              Code: <strong> {props.data.code}</strong>
             </span>
             <button className='btn-outline' data-bs-dismiss='offcanvas' aria-label='Close'>
               Copy Code

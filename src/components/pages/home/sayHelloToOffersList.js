@@ -1,7 +1,7 @@
 export const SAY_HELLO_TO_OFFERS = [
   {
     id: 'c12',
-    path: `${process.env.PUBLIC_URL}/offer`,
+    path: `${process.env.PUBLIC_URL}/product`,
     image: 'assets/images/product/8.png',
     title: 'Assorted Capsicum Combo',
     qty: 615,
@@ -11,7 +11,7 @@ export const SAY_HELLO_TO_OFFERS = [
   },
   {
     id: 'c13',
-    path: `${process.env.PUBLIC_URL}/offer`,
+    path: `${process.env.PUBLIC_URL}/product`,
     image: 'assets/images/product/6.png',
     title: 'Assorted Capsicum Combo',
     qty: 620,
@@ -21,7 +21,7 @@ export const SAY_HELLO_TO_OFFERS = [
   },
   {
     id: 'c14',
-    path: `${process.env.PUBLIC_URL}/offer`,
+    path: `${process.env.PUBLIC_URL}/product`,
     image: 'assets/images/product/7.png',
     title: 'Assorted Capsicum Combo',
     qty: 550,

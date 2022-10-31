@@ -9,6 +9,17 @@ import RecentlyBought from './RecentlyBought';
 import SayHelloToOffers from './SayHelloToOffers';
 import ShopByCategories from './ShopByCategories';
 const Home = () => {
+  let fibonacci = {
+    *[Symbol.iterator]() {
+      let pre = 0,
+        cur = 1;
+      for (;;) {
+        [pre, cur] = [cur, pre + cur];
+        yield cur;
+      }
+    },
+  };
+  console.log(fibonacci);
   return (
     <main className='main-wrap mb-xxl index-page'>
       <SearchBox />

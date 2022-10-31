@@ -19,7 +19,7 @@ const Cart = () => {
           <CouponSection />
           <Summery />
         </>
-      )}
+      )} 
       {cartCtx.items.length === 0 && <EmptyCart />}
     </main>
   );

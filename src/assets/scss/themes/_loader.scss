@@ -43,7 +43,7 @@
     position: absolute;
     left: 0;
     top: 0;
-    content: "";
+    content: '';
     border-radius: inherit;
     width: 101%;
     height: 101%;
@@ -58,7 +58,7 @@
     position: absolute;
     left: 0;
     top: 0;
-    content: "";
+    content: '';
     border-radius: inherit;
     width: 101%;
     height: 101%;
@@ -144,7 +144,7 @@
           padding: 4px 14px;
           &:after {
             left: 8px;
-            [dir="rtl"] & {
+            [dir='rtl'] & {
               right: 8px;
               left: unset;
             }
@@ -225,7 +225,7 @@
           height: 120%;
           width: 120%;
           left: -2px;
-          [dir="rtl"] & {
+          [dir='rtl'] & {
             right: -2px;
             left: unset;
           }
@@ -271,7 +271,7 @@
             height: calc(58px + (70 - 58) * ((100vw - 320px) / (1920 - 320)));
             @include after-white();
           }
-          [dir="rtl"] & {
+          [dir='rtl'] & {
             padding-right: unset;
             padding-left: calc(12px + (20 - 12) * ((100vw - 320px) / (1920 - 320)));
             border-right: unset;
@@ -297,7 +297,7 @@
           height: 24px;
           display: block;
           margin-left: auto;
-          [dir="rtl"] & {
+          [dir='rtl'] & {
             margin-right: auto;
             margin-left: unset;
           }
@@ -393,7 +393,7 @@
             height: calc(50px + (65 - 50) * ((100vw - 320px) / (1920 - 320)));
             padding-right: calc(12px + (20 - 12) * ((100vw - 320px) / (1920 - 320)));
             border-right: 1px solid $border-color1;
-            [dir="rtl"] & {
+            [dir='rtl'] & {
               padding-right: unset;
               padding-left: calc(12px + (20 - 12) * ((100vw - 320px) / (1920 - 320)));
               border-left: 1px solid $border-color1;
@@ -499,15 +499,15 @@
             height: 24px;
             margin-left: auto;
             @include after-white();
-            [dir="rtl"] & {
+            [dir='rtl'] & {
               margin-right: auto;
               margin-left: unset;
             }
           }
         }
       }
-      .product-detail {
-        .product-detail-box {
+      .product {
+        .product-box {
           h2 {
             width: max-content;
             @include after-ani-grey();
@@ -536,7 +536,7 @@
                   position: absolute;
                   left: 0;
                   top: 0;
-                  content: "";
+                  content: '';
                   border-radius: inherit;
                   width: 101%;
                   height: 101%;
@@ -615,7 +615,7 @@
             height: calc(50px + (65 - 50) * ((100vw - 320px) / (1920 - 320)));
             padding-right: calc(12px + (20 - 12) * ((100vw - 320px) / (1920 - 320)));
             border-right: 1px solid $border-color1;
-            [dir="rtl"] & {
+            [dir='rtl'] & {
               padding-right: unset;
               padding-left: calc(12px + (20 - 12) * ((100vw - 320px) / (1920 - 320)));
               border-left: 1px solid $border-color1;
@@ -747,10 +747,10 @@
             }
             &::before {
               position: absolute;
-              content: "";
+              content: '';
               width: 100px;
               left: 33px;
-              [dir="rtl"] & {
+              [dir='rtl'] & {
                 right: 33px;
                 left: unset;
               }
@@ -1291,7 +1291,7 @@
             height: calc(50px + (65 - 50) * ((100vw - 320px) / (1920 - 320)));
             padding-right: calc(12px + (20 - 12) * ((100vw - 320px) / (1920 - 320)));
             border-right: 1px solid $border-color1;
-            [dir="rtl"] & {
+            [dir='rtl'] & {
               padding-left: calc(12px + (20 - 12) * ((100vw - 320px) / (1920 - 320)));
               padding-right: unset;
               border-left: 1px solid $border-color1;

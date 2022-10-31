@@ -4,18 +4,12 @@ import { ORDER_TAB } from './orderTabsList';
 import { Nav, NavItem, TabContent, NavLink, TabPane } from 'reactstrap';
 import { ORDER_LIST } from './orderList';
 import OrderBox from './OrderBox';
+import useShowClass from '../../../hook/showAnimation';
 
 const OrderHistory = () => {
   const [showNavContent, setShowNavContent] = useState(0);
-  const [show, setShow] = useState('');
+  const [show, setShow] = useShowClass('show');
 
-  useEffect(() => {
-    const timeout = setTimeout((i) => {
-      setShow('show');
-    }, 200);
-
-    return () => clearTimeout(timeout);
-  }, [show]);
   const navActiveHandler = (i) => {
     setShowNavContent(i);
     setShow('');
@@ -23,9 +17,9 @@ const OrderHistory = () => {
 
   return (
     <main className='main-wrap mb-xxl order-history'>
-      <Nav className='nav nav-tab nav-pills custom-scroll-hidden' tabs>
+      <Nav className='nav nav-tab nav-pills custom-scroll-hidden'>
         {ORDER_TAB.map((item, i) => (
-          <NavItem key={i}>
+          <NavItem key={`navItem${i}`}>
             <NavLink onClick={() => navActiveHandler(i)} className={`${showNavContent === i ? 'active' : ''}`}>
               {item.title}
             </NavLink>
@@ -37,9 +31,9 @@ const OrderHistory = () => {
         {/* <!-- Catagories Content Start --> */}
         <TabContent className=' ratio2_1' activeTab={`${showNavContent}`}>
           {ORDER_TAB.map((_, i) => (
-            <TabPane className={`fade ${showNavContent === i && show}`} tabId={`${i}`} key={i}>
+            <TabPane key={`tabPan${i}`} className={`fade ${showNavContent === i && show}`} tabId={`${i}`}>
               {ORDER_LIST.map((item, i) => (
-                <OrderBox item={item} key={i} />
+                <OrderBox item={item} key={`orderBox${i}`} />
               ))}
             </TabPane>
           ))}

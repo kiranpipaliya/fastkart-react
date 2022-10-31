@@ -16,6 +16,8 @@ import Login from '../components/pages/auth/Login';
 import Register from '../components/pages/auth/Register';
 import Help from '../components/pages/help';
 import Notification from '../components/pages/notification';
+import Offer from '../components/pages/offer';
+import OrderDetail from '../components/pages/order-detail';
 
 export const ROUTE_DATA = [
   { path: `${process.env.PUBLIC_URL}`, comment: <Home /> },
@@ -35,5 +37,7 @@ export const ROUTE_DATA = [
   { path: `${process.env.PUBLIC_URL}/register`, comment: <Register /> },
   { path: `${process.env.PUBLIC_URL}/help`, comment: <Help /> },
   { path: `${process.env.PUBLIC_URL}/notification`, comment: <Notification /> },
+  { path: `${process.env.PUBLIC_URL}/order-detail`, comment: <OrderDetail /> },
+  { path: `${process.env.PUBLIC_URL}/offer`, comment: <Offer /> },
   { path: `${process.env.PUBLIC_URL}/*`, comment: <PageNotFound /> },
 ];
